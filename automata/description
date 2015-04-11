@@ -20,7 +20,7 @@ If this does occur you are to break ties by first favoring the ruleset with the 
 # Input
 
 The input starts with an integer k (1 < k < 100) the number of cases.
-The next line has one integer s_i (1 < s_i < 1000, 0 <= i < k) representing the side lengths of the grid.
+The next line has one integer s_i (1 < s_i < 100, 0 <= i < k) representing the side lengths of the grid.
 The following s_i lines have s_i integers defining the first state.
 There will be one extra line for readability of the sample input, and then next s_i lines have s_i integers defining the second state.
 A cell of the grid is considered alive if its value is 1, it is considered dead if its value is 0.
