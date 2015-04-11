@@ -1,0 +1,28 @@
+B: Traffic Lights
+
+As you sit at a red light on your way home you wonder if you could’ve taken a different route and avoided more red lights. You decide to simulate a much simpler version of the problem to see how much of a difference it could make. For each time step in the simulation, you are able to travel down one road to one intersection and the lights at the intersections toggle from red to green or green to red. Instead of having the intersection have several different lights, your simulation only has one which determines if you can travel through the intersection. Red prohibits passage through the intersection while green permits it. There will never be more than one road between a pair of intersections and there will never be an intersection you cannot reach.
+Details of the Input
+The input will begin with two integers n (2 <= n <= 100), indicating the number of intersections, and r (n - 1 <= r <= n * (n -1) / 2) that indicates the number of intersections in a test case. Next, there are n integers from 1 to n indicating the initial state of the lights at the corresponding intersection. A value of R means that the light is red and a value of G means that the light is green. After that, there are n lines of input containing pairs of integers representing bi-directional roads between the intersections. Finally, there is a pair of integers representing the start and end point respectively.
+Details of the Output
+For each case, output the shortest distance from the start to the end by traversing the graph while respecting the traffic lights.
+Sample Input
+
+5 8
+5 G
+2 G
+3 G
+1 R
+4 R
+4 5
+3 5
+2 5
+1 2
+1 3
+1 4
+3 4
+2 3
+1 5
+
+Sample Output
+
+3

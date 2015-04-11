@@ -1,0 +1,19 @@
+A: Hacking
+If you have ever played Portal 2, you will likely remember a scene where your companion, Wheatley, attempts to hack a computer. He begins with aaaaaa and then skips to aaaaac. While this is going to be very slow to do manually, he may not ever input the correct password since he is incorrectly determining the next password to try. Can you help him?
+Details of the Input
+The input will begin with a single integer n (1 <= n <= 100) that indicates the number of test cases. For each test case, there will be a single string consisting of six lowercase letters indicating the previous password that was tried. The input will never have zzzzzz since there is no password to try after that one.
+Details of the Output
+For each case, output the next password that should be attempted.
+
+Sample Input
+
+3
+aaaaaa
+abcdef
+aaaaaz
+
+Sample Output
+
+aaaaab
+abcdeg
+aaaaba
