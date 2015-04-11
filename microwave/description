@@ -17,7 +17,7 @@ That is, given the display of the microwave, report the remaining total seconds 
 
 # Input
 
-The input starts with an integer k (1 < k < 10^2) the number of total cases. The next k integers d_i (0 < d_i < 10^4, 0 <= i < k) correspond to the ith display time.
+The input starts with an integer k (1 < k < 100) the number of total cases. The next k integers d_i (0 < d_i < 10000, 0 <= i < k) correspond to the ith display time.
 
 # Output
 
@@ -26,8 +26,8 @@ For each test case, output the total seconds until the microwave is done.
 # Sample Input
 
 2
-10
-100
+0010
+0100
 
 # Sample Output 
 
