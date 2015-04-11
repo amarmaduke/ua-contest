@@ -14,8 +14,8 @@ One such pattern is S23/B36 called HighLife.
 Although these rules are very interesting they do not encapsulate all of cellular automata.
 Given two states of a cellular automaton your job is determine if a ruleset of the S/B form can describe the evolution from the first state to the second state.
 
-It is possible to have more then one ruleset that describes the evolution.
-If this does occur you are to break ties by first favoring the ruleset with the minimum number of characters required to describe the ruleset and second by favoring the ruleset with the minimum numbers describing each rule.
+It is possible to have more then one ruleset that describes the evolution between states..
+If this does occur you are to choose the smallest set of rules to explain the evolution.
 \end{problem}
 
 \begin{formalin}
@@ -29,7 +29,7 @@ Cells outside of the given grid are considered dead.
 \end{formalin}
 
 \begin{formalout}
-For each test case, output the ruleset describing the state transition from the first state to the second state of the form S*/B*. If no such ruleset is possible then output "Not Possible."
+For each test case, output the ruleset describing the state transition from the first state to the second state of the form S*/B*. The numbers after either S or B must be ordered from least to greatest. If no such ruleset is possible then output "Not Possible."
 \end{formalout}
 
 \begin{datain}
