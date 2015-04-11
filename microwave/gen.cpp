@@ -6,10 +6,10 @@ int main()
 
    cout << "15" << endl;
 
-   cout << "10" << endl;
-   cout << "100" << endl;
-   cout << "0" << endl; 
-   cout << "59" << endl;
+   cout << "0010" << endl;
+   cout << "0100" << endl;
+   cout << "0000" << endl; 
+   cout << "0059" << endl;
    cout << "9999" << endl;
 
    for (int i = 0; i < 10; ++i)
