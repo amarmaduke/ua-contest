@@ -1,9 +1,14 @@
 Does it fit?
+  Given a 3D rectangular cavity, determine if a 3D rectangular box can fit in it.
 2nd shortest path.
 Tree isomorphisms.
 Cryptocurency profits.
+  given special knowledge of the future and an amount of money, make the most money.
 Concentric squares cryptography.
+  Squares that you need to rotate in order to decrypt.
 Looping song.
+  Given a list of instruments with associated times that must be played, determine if you can create a looping portion in a time period.
 Field goal.
 Hello world ROT.
 Square, four quads interior by area
+  square with lines coming from side midpoints to a point and three areas given, give the final area.
