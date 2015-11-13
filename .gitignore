@@ -1,3 +1,9 @@
+# LaTeX Output Files
+*.aux
+*.dvi
+*.log
+*.pdf
+
 # Compiled Object files
 *.slo
 *.lo
