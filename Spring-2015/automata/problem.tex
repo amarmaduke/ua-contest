@@ -1,0 +1,80 @@
+\begin{problem}{E: Cellular Automata}
+
+Cellular automata is a fairly common interest among the lonely computer scientist.
+A special type of rulesets is of central interest because of the famous variant, Conway's Game of Life (GoL).
+These rulesets consist of two kinds of rules, survival rules and birth rules.
+Both rules consist of a number corresponding to the count of live cells adjacenet to the current cell of interest.
+Adjacent means left, right, up, down, and diagonals (of distance one).
+A survival rule means that if a cell is alive and the count of adjacent cells matches the number for any of the given survival rules, then the cell continues to live.
+A birth rule means that if a cell is dead and the count of adjacent cells matches the number for any of the given birth rules, then the cell becomes alive.
+The rules of GoL can be described succinctly as S23/B3, survive if there are 2 or 3 live cells, birth if there is 2 live cells.
+
+Although GoL is the most popular of these variants, there are several just as interesting rulesets.
+One such pattern is S23/B36 called HighLife.
+Although these rules are very interesting they do not encapsulate all of cellular automata.
+Given two states of a cellular automaton your job is determine if a ruleset of the S/B form can describe the evolution from the first state to the second state.
+
+It is possible to have more then one ruleset that describes the evolution between states..
+If this does occur you are to choose the smallest set of rules to explain the evolution.
+\end{problem}
+
+\begin{formalin}
+The input starts with an integer $k$ ($1 < k < 100$) the number of cases.
+The next line has one integer $s_i$ ($1 < s_i < 100, 0 <= i < k$) representing the side lengths of the grid.
+The following $s_i$ lines have $s_i$ integers defining the first state.
+There will be one extra line for readability of the sample input, and then next $s_i$ lines have $s_i$ integers defining the second state.
+A cell of the grid is considered alive if its value is 1, it is considered dead if its value is 0.
+This pattern repeats for $k-1$ additional times (for $k$ total cases).
+Cells outside of the given grid are considered dead.
+\end{formalin}
+
+\begin{formalout}
+For each test case, output the ruleset describing the state transition from the first state to the second state of the form S*/B*. The numbers after either S or B must be ordered from least to greatest. If no such ruleset is possible then output "Not Possible."
+\end{formalout}
+
+\begin{datain}
+3
+5
+0 0 0 0 0
+0 0 1 1 0
+0 0 1 0 1
+0 0 1 0 0
+0 0 0 0 0
+
+0 0 0 0 0
+0 0 1 1 0
+0 1 1 0 0
+0 0 0 1 0
+0 0 0 0 0
+5
+0 0 0 0 0
+0 1 1 1 0
+0 1 0 1 0
+0 1 1 1 0
+0 0 0 0 0
+
+0 1 0 1 0
+1 0 0 0 1
+0 0 0 0 0
+1 0 0 0 1
+0 1 0 1 0
+5
+0 0 0 0 0
+0 0 1 1 0
+0 0 1 0 1
+0 0 1 0 0
+0 0 0 0 0
+
+1 0 0 0 0
+0 0 1 1 0
+0 0 1 0 0
+0 0 0 1 0
+0 1 0 0 0
+\end{datain}
+
+\begin{dataout}
+S23/B3
+S/B2
+Not Possible.
+\end{dataout}
+
