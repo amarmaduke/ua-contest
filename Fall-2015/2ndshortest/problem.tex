@@ -1,0 +1,46 @@
+\begin{problem}{B: Seconds Please}
+
+Jeremy is participating in a race tomorrow with the girl of his dreams.
+He happens to know that she is one of the fastest and best prepared participants asides from him, and is very confident she would win.
+However, he's stiff competition himself, and he's worried about stealing her thunder.
+Jeremy had the brilliant plan of intentionally coming in second instead of winning and crushing any future hope between him and her.
+He doesn't want it to be too obvious though, and doesn't care for backtracking or paths that lead back to a spot he's already visited.
+He also has a lot of trouble actually discovering which path will accomplish his goal, so he's enlisted you to help!
+
+Your job is to take his painstakingly created maps of potential routes in the long race and figure out which ones will suffice.
+Lucky for you, because of Jeremy's paranoia and his meticulous nature he's made sure that the maps he gave you already don't have any potential loops and are already encoded in the form of a graph.
+Really you should thank him for his kindness.
+
+\end{problem}
+
+\begin{formalin}
+The input starts with two integers $n$ and $m$ ($1 \leq n \leq 100$) the number of nodes and the number of edges.
+The next line has one integer $t$ ($1 < t \leq n$) the target node.
+The starting node is always the node with id one.
+The following $m$ lines have three integers $x$, $y$, and $d$ ($1 \leq d \leq 100$).
+These are the the edges in the graph with a directed edge from node $x$ to node $y$ with distance $d$.
+The input ends when both $n$ and $m$ are zero.
+\end{formalin}
+
+\begin{formalout}
+For each input case output the distance of the second shortest path, or ``Impossible!'' sans quotes if one does not exist.
+\end{formalout}
+
+\begin{datain}
+3 3
+3
+1 2 2
+2 3 3
+1 3 1
+3 2
+3
+1 2 1
+2 3 1
+0 0
+\end{datain}
+
+\begin{dataout}
+5
+Impossible!
+\end{dataout}
+

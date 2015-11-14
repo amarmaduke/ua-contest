@@ -1,0 +1,67 @@
+\begin{problem}{A: Hello World!}
+
+Jay is a big fan of hiding messages from his friends that aren't cool enough.
+He thinks that a certain amount of sophistication should be required in being graced by his famous quotes, and he has a lot of quotes.
+Jay is fascinated with quoting himself, and they've gotten quite long!
+He's having trouble encoding the quotes in a concise way that would prevent the uncool friends from reading them.
+After much deliberation he decided on a strategy involving matrices.
+He would truncate his quote into a perfect square matrix, only the best quotes can fit this pattern.
+Then, he would rotate each ``layer'' of the matrix by a certain arbitrary value and record those values.
+Finally, he would give the matrix and the values to his friends knowing only the clever people would be able to decode his matrix and read his famous quote.
+
+A ``layer'' of a matrix is a concentric set of two rows and two columns. For example, a $4x4$ matrix has two layers. The first layer consists of the first row, the last row, the first column, and the last column. The second layer consists of the elements in the second and third row, and second and third column, not including the elements in the first layer.
+
+One of Jay's friends who isn't so bright was so frustrated with his shenanigans that he hired you to decode the gibberish.
+Your job is to write a program for Jay's friend so that he can quickly and easily share Jay's quotes with all of Jay's friends and thus invalidate his ego.
+
+\end{problem}
+
+\begin{formalin}
+The input starts with an integer $n$ the size of the matrix ($1 \leq n \leq 100$).
+The next $n$ lines consist of $n$ characters which compose the matrix.
+Following the matrix are a stream of integers $k$ ($-10 \leq k \leq 10$) for rotating each layer of the matrix.
+A negative value of $k$ means rotating that layer clockwise.
+The input ends when $n = 0$.
+\end{formalin}
+
+\begin{formalout}
+For each case output the matrix after rotation.
+\end{formalout}
+
+\begin{datain}
+4
+ABCD
+EFGH
+IJKL
+MNOP
+1
+1
+4
+ABCD
+EFGH
+IJKL
+MNOP
+-1
+1
+TBT
+MES
+AHE
+-2
+0
+0
+\end{datain}
+
+\begin{dataout}
+BCDH
+AGKL
+EFJP
+IMNO
+EABC
+IGKD
+MFJH
+NOPL
+AMT
+HEB
+EST
+\end{dataout}
+
