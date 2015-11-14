@@ -1,0 +1,31 @@
+\begin{problem}{C: Shots Fired}
+Jessie and James are professional sharpshooters that are best known for being able to make bullets collide in mid-air.
+As you might expect, this requires a lot of trial and error when practicing.
+In an effort to make practices more productive, they have hired you to write a program that determines if the bullets will collide.
+\end{problem}
+
+\begin{formalin}
+The first line of input contains a single integer that specifies the number of test cases.
+Each test case is on its own line and consists of twelve integers.
+These integers represent the initial positions and the vectors at which the bullets will be fired.
+The first three integers, $x$ $y$ $z$, are the starting coordinates of the bullet and the second three integers, $u$ $v$ $w$, represent the vector describing the direction and velocity of the bullet ($-10000 \leq x, y, z, u, v, w \leq 10000$).
+The second set of six integers represent the second bullet in the same fashion as the first.
+It is guaranteed that the bullets will not have the same starting position.
+\end{formalin}
+
+\begin{formalout}
+For each case, if the bullets will collide output "HIT", otherwise output "MISS".
+The bullets can only collide on integer coordinates and we only consider integer time steps for both bullets' movement. 
+\end{formalout}
+
+\begin{datain}
+2
+2 4 6 1 1 1 1 3 5 2 2 2
+1 1 1 -1 -2 -3 1 2 3 1 1 1
+\end{datain}
+
+\begin{dataout}
+HIT
+MISS
+\end{dataout}
+
