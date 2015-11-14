@@ -1,0 +1,34 @@
+\begin{problem}{C: Bitcoin}
+Jordan is obsessed with Bitcoin. He finds everything about it fascinating. 
+His dream would be to get rich by predicting the price of Bitcoin and buying a bunch when the price is low and selling them when the price is high.
+Of course, this would be impossible to do with certainty, but that doesn't stop Jordan from dreaming.
+He often imagines he has the exact Bitcoin value for each day and fatasizes about how much money he could make.
+However, even with perfect information about the future, he quickly realizes that this isn't as straightforward as he thought it would be.
+It's trivial in cases where the prices starts at the lowest point and climbs to the highest point, but in cases where the price fluctuates, it can be much harder to figure out when to buy and when to sell. 
+He sets out to come up with a method of making the most money. 
+He needs to pick a day to buy Bitcoin and a later day to sell it that would result in the greatest difference in price.
+He only consideres doing this once and not several times over the course of the price timeline he is predicting.
+\end{problem}
+
+\begin{formalin}
+Each case is on its own line.
+Each case begins with a single integer, $n$ ($1 \leq n \leq 10000$), that represents the number of days of prices that Jordan is considering. 
+Next, $n$ integers, $i$ ($1 \leq i \leq 1000000$), come that represent the prices for each day.
+\end{formalin}
+
+\begin{formalout}
+For each case, print out the greatest amount of money that Jordan can make.
+\end{formalout}
+
+\begin{datain}
+5 1 2 3 4 5
+5 5 2 3 4 1
+5 5 4 3 2 1
+\end{datain}
+
+\begin{dataout}
+4
+2
+0
+\end{dataout}
+
