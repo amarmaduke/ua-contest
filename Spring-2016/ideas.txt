@@ -1,0 +1,19 @@
+
+Word Search
+Given a string S separated by standard ascii spaces.
+You have the ability to move over a word in O(1) and over a character in O(1)
+You have to reach some index i.
+How can you get there in the least cost?
+Solution?
+   Just greedy, move as many words as necessary (backtrack on the last word that pushes you over)
+   Then move the necessary amount of characters from either side, pick the min.
+
+
+Gears, Gears, Gears
+Given a number, N, and a set of numbers X.
+What is the minimum sequence of numbers a_1, ..., a_n
+such that a_1 + ... + a_n = N where a_i in X for all i
+Possibly add the constraint that numbers in X can only be used so many times
+Solution?
+   I believe you can split this into sub problems fairly easily
+   So either divide and conquer, prunned search, or dp should solve it
