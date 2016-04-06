@@ -15,9 +15,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Basic usage:
 %        \documentclass{article}
-% 
+%
 %        \usepackage{../../latex/icpc_problem} % or wherever this package is stored
-% 
+%
 %        \title{title of the problem here}
 %        \author{your name here}
 %        \keywords{list of lower-case keywords separated by spaces}
@@ -25,21 +25,21 @@
 %        an argument to a LaTeX command.
 %        }
 %        \difficulty{2} % the difficulty should be a non-negative integer
-% 
+%
 %        \begin{document}
-% 
+%
 %        \begin{problemDescription}
 %        The basic problem description goes here.
 %        \end{problemDescription}
-% 
+%
 %        \begin{inputDescription}
 %        A description of the input format goes here.
 %        \end{inputDescription}
-% 
+%
 %        \begin{outputDescription}
 %        A description of the output format goes here.
 %        \end{outputDescription}
-% 
+%
 %        \begin{sampleInput}
 %        The sample input can be anything (except \end{SaveVerbatim}, which
 %        would cause a LaTeX parsing error). Treat this like the standard
@@ -49,10 +49,10 @@
 %        The sample output environment is similar to sample input; treat it
 %        like a verbatim environment.
 %        \end{sampleOutput}
-% 
+%
 %        \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 % Note that the sampleInput and sampleOutput environments should not have a
 % paragraph break between them; they should float to the right positions to
 % minimize space. It's okay to have a break between them if you want to force
@@ -151,6 +151,7 @@
 % \header is used generally to highlight the beginning of each part of the
 % document. We avoid using \section because we have more control over the
 % spacing.
+\newcommand{\sheader}[1]{\medskip{\bf#1}\par}
 \newcommand{\header}[1]{\medskip{\Large\bf#1}\par}
 \newcommand{\pheader}[1]{\medskip{\Huge\bf#1}\par}
 
@@ -308,7 +309,7 @@
 {\end{SaveVerbatim}
 % create some boxes, but don't display them
 \sbox{\sampleInputVerbatimBox}{\BUseVerbatim{sampleInputSavedVerbatim}}
-\sbox{\sampleInputHeaderBox}{\header{Sample Input}}
+\sbox{\sampleInputHeaderBox}{\sheader{Sample Input}}
 % find the widths of the boxes
 \settowidth{\sampleInputVerbatimWidth}{\usebox{\sampleInputVerbatimBox}}
 \settowidth{\sampleInputHeaderWidth}{\usebox{\sampleInputHeaderBox}}
@@ -337,7 +338,7 @@
 {\end{SaveVerbatim}
 % create some boxes, but don't display them
 \sbox{\sampleOutputVerbatimBox}{\BUseVerbatim{sampleOutputSavedVerbatim}}
-\sbox{\sampleOutputHeaderBox}{\header{Sample Output}}
+\sbox{\sampleOutputHeaderBox}{\sheader{Sample Output}}
 % find the widths of the boxes
 \settowidth{\sampleOutputVerbatimWidth}{\usebox{\sampleOutputVerbatimBox}}
 \settowidth{\sampleOutputHeaderWidth}{\usebox{\sampleOutputHeaderBox}}

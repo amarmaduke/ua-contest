@@ -4,11 +4,13 @@ using namespace std;
 
 int main()
 {
+#ifndef SINGLE_FILE
    int n;
    cin >> n;
 
    for (int i = 0; i < n; ++i)
    {
+#endif
       int x, y, result;
       char op;
       cin >> x >> op >> y;
@@ -28,6 +30,8 @@ int main()
             break;
       }
       cout << result << endl;
+#ifndef SINGLE_FILE
    }
+#endif
    return 0;
 }
