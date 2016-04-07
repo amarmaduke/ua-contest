@@ -1,0 +1,50 @@
+\begin{problem}{A: Operations}
+
+Thomas is really, really bad at math.
+He is so incredibly bad at math that he can't compute simple operations.
+However, he is a pretty handsome guy and his charisma roll was high, so he's managed to convince you to help him out.
+
+In particular, Thomas needs you to tell him the answer to a computation of the form $x$ $op$ $y$, where $x$ and $y$ are single digit numbers, and ${op}$ is one of either $+, -, *, /$.
+For each given operation Thomas only cares about the truncated integral result.
+Thus, the result of $5 / 2$ is $2$, not $2.5$.
+Help Thomas out!
+
+\end{problem}
+
+\begin{formalin}
+The input consists of three characters $x$, $p$, and $y$.
+Both $x$ and $y$ are integers ($1 \leq x, y \leq 9$).
+And $p$ is either $+$, $-$, $*$, or $/$.
+\end{formalin}
+
+\begin{formalout}
+Output the result of the integer operation.
+\end{formalout}
+
+\begin{datain}
+1 + 2
+\end{datain}
+\begin{dataout}
+3
+\end{dataout}
+
+\begin{datain}
+9 * 9
+\end{datain}
+\begin{dataout}
+81
+\end{dataout}
+
+\begin{datain}
+1 / 9
+\end{datain}
+\begin{dataout}
+0
+\end{dataout}
+
+\begin{datain}
+2 - 3
+\end{datain}
+\begin{dataout}
+-1
+\end{dataout}
