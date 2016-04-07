@@ -10,21 +10,11 @@ int inf = (1 << 30);
 
 int solve(int t)
 {
-   int large_count = 0;
    if (t == 0)
       return 0;
    else if (t < 0)
       return inf;
-   for (int i = 0; i < kinds.size(); ++i)
-   {
-      if (kinds[i] == t)
-         return 1;
-      if (kinds[i] > t)
-         ++large_count;
-   }
-   if (large_count == kinds.size())
-      return inf;
-   if (memo[t])
+   if (memo.count(t) > 0)
       return memo[t];
 
    int result = inf;
@@ -39,10 +29,14 @@ int solve(int t)
 
 int main()
 {
+#ifndef SINGLE_FILE
    int kases;
    cin >> kases;
    for (int k = 0; k < kases; ++k)
    {
+      memo.clear();
+      kinds.clear();
+#endif
       int n, t;
       cin >> n >> t;
       for (int i = 0; i < n; ++i)
@@ -60,5 +54,7 @@ int main()
       {
          cout << "Possible: " << result << endl;
       }
+#ifndef SINGLE_FILE
    }
+#endif
 }
