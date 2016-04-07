@@ -31,10 +31,12 @@ pair<int, int> bounds(vector<string> &v, int idx)
 
 int main()
 {
+#ifndef SINGLE_FILE
    int n;
    cin >> n;
    for (int i = 0; i < n; ++i)
    {
+#endif
       int w, t;
       cin >> w >> t;
       vector<string> words;
@@ -45,10 +47,13 @@ int main()
          words.push_back(x);
       }
       int l, r;
-      tie(l, r) = bounds(words, t);
+      pair<int, int> temp;
+      temp = bounds(words, t);
+      l = temp.first; r = temp.second;
       vector<int> off = offsets(words);
       int lidx = abs(off[l] - t);
       int ridx = abs(off[r] - t);
+      //cout << l << " " << lidx << " " << off[l] << " " << t << endl;
       if (l + lidx < r + ridx)
       {
          cout << (l + lidx) << " " << words[l][lidx] << endl;
@@ -56,6 +61,8 @@ int main()
       {
          cout << (r + ridx) << " " << words[r][ridx] << endl;
       }
+#ifndef SINGLE_FILE
    }
+#endif
    return 0;
 }

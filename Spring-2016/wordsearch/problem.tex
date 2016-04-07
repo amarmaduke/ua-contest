@@ -1,30 +1,43 @@
-\begin{problem}{B:  }
+\begin{problem}{B: Word Hops}
 
-Le'flavor text
+Tina has a curious computer that operates on strings.
+Her computer is able to move from one space separated word to another instantly.
+It can also move from one character to another instantly.
+Tina tells you that she considers a ``move'' an instance of the computer moving it's address pointer either by one character or by one word.
+She also tells you that the computer always starts pointing at the very first character which is the zero address of the programs memory.
+
+Although Tina has managed to get her hands on some interesting hardware, she's not really a software person.
+She's asked you to help her out in writing a program to determine the minimum number of moves required to get to an address.
+That is, if the computer has the state ``Hello World'', with the target address of 7, then it could move the pointer once from the 0 address to the 6 address (now pointing at W), and then once more to the 7 address.
+That means it would take the computer two moves to get the 7 address with the initial state ``Hello World''.
+
+Given the number of words, the target address, and the initial state of the computer, your job is to figure out the minimum number of moves for Tina.
 
 \end{problem}
 
 \begin{formalin}
-The input starts with one integer, $n$ ($1 \leq n \leq 100$) the number of test cases.
-The next $2n$ lines represent test cases (a single test case spanning two lines).
-The first line of the test case has two integers, $w$ ($1 \leq w \leq 100$), the number of words and $t$ ($1 \leq t \leq 1000$), the target index.
-The second line of the test case is a sequence $w$ space separated words.
+The input consists of two lines.
+The first line has two integers, $w$ ($1 \leq w \leq 100$), the number of words and $t$ ($1 \leq t \leq 1000$), the target index.
+The second line is a sequence $w$ space separated words with no special characters.
 \end{formalin}
 
 \begin{formalout}
-For each test case output the minimum number of moves required to reach the target index and the character at the target index.
+Output the minimum number of moves required to reach the target index and the character at the target index.
 \end{formalout}
 
 \begin{datain}
-2
 2 6
-Hello World!
-6 20
-This is the best sentence ever.
+Hello World
 \end{datain}
-
 \begin{dataout}
 1 W
-7 t
 \end{dataout}
 
+
+\begin{datain}
+6 20
+This is the best sentence ever
+\end{datain}
+\begin{dataout}
+7 t
+\end{dataout}
