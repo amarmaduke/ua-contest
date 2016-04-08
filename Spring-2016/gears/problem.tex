@@ -1,17 +1,18 @@
-\begin{problem}{D: The Wheel Apparatus}
+\begin{problem}{C: The Wheel Apparatus}
 Kacey has a peculiar apparatus of wheels that she wants to share with you.
 The apparatus rests on the ground with wheels of different radii.
-Each wheel has an associated crank to turn the wheel.
+Each wheel has an associated crank to turn the associated wheel.
 With one revolution of a crank for a given wheel the apparatus moves a distance equal to the radius of the wheel.
 Kacey has spent a lot of time working on this apparatus of hers, and she's very proud of it.
 She's managed to grease the cranks in a fashion that the effort taken to crank one revolution is indistinguishable between all the wheels.
 
-She's a great mechanic, and not bad at math either, but she can't do everything, and that's where you come in.
+She's a great mechanic, and not bad at math either, but she can't tire herself out moving this thing.
 She figures it'd be good to know the minimum number of cranks it would take to move the apparatus exactly a distance $t$.
 Since the work of cranking each wheel is equivalent, she just wants to minimize her effort.
+
 To make it a bit harder, she's asked you to solve the problem for a generic apparatus of any setup of wheels.
 However, she also only cares about full revolutions of the crank, fractional revolutions should not be considered.
-As well, she doesn't what the possible apparatus to have two wheels of the same radius, so she wont give you a problem with non-unique radii.
+Also, she doesn't want the possible apparatus to have two wheels of the same radius, so she'll only give you a problem with unique radii.
 Clearly for any given apparatus it might not be possible to turn the cranks in integer revolutions to exactly traverse her desired distance.
 In this case Kacey just wants you to tell her it can't be done.
 She doesn't imagine this is a kind of problem she'll be able to solve quickly on her own.
