@@ -1,11 +1,23 @@
-\begin{problem}{D: Shrek and Dumbrix} 
+\begin{problem}{D: Shrek and Dumbrix}
+Shrek loves puzzle games.
+One of his favorite games is Numbrix.
+In this game, you are given a 9 by 9 starting grid with some positions containing values and some blank.
+The point of the game is to fill in the blank spots so that there is a continuous chain of numbers between 1 and 81.
+In other words, all values from 2 to 80 are directly connected to the values 1 greater and 1 less than themselves.
+Connections are only allowed through single movements on the vertical and horizontal axes (i.e. no diagonal movement).
+It is guaranteed that each Numbrix grid has only 1 possible solution.
 
-Shrek loves puzzle games. One of his favorite games is Numbrix. In this game, you are given a 9 by 9 starting grid with some positions containing values and some blank. The point of the game is to fill in the blank spots so that there is a continuous chain of numbers between 1 and 81. In other words, all values from 2 to 80 are directly connected to the values 1 greater and 1 less than themselves. Connections are only allowed through single movements on the vertical and horizontal axes (i.e. no diagonal movement). It is guaranteed that each Numbrix grid has only 1 possible solution.
-
-Shrek likes Numbrix, but he thinks it might be too hard for you. He has decided to relax the rules a little bit so you might have a chance of solving the puzzles too. In his revised version of the game, Dumbrix, he provides two additional guarantees. The given board always contains the numbers 1 and 81. Also, for any continuous sequence of values between 1 and 81 of length $\geq 6$ at least one value in the sequence exists in the given board.
+Shrek likes Numbrix, but he thinks it might be too hard for you.
+He has decided to relax the rules a little bit so you might have a chance of solving the puzzles too.
+In his revised version of the game, Dumbrix, he provides two additional guarantees.
+The given board always contains the numbers 1 and 81.
+Also, for any continuous sequence of values between 1 and 81 of length $\geq 6$ at least one value in the sequence exists in the given board.
+\end{problem}
 
 \begin{formalin}
-The input consists of 9 lines each containing 9 integer values. The value at each line $i$ and position $j$, $v_{i,j}$ ($0 \leq v_{i,j} \leq 81$), represents its corresponding board position's value. Positions with a value of 0 represent unknown values.
+The input consists of 9 lines each containing 9 integer values.
+The value at each line $i$ and position $j$, $v_{i,j}$ ($0 \leq v_{i,j} \leq 81$), represents its corresponding board position's value.
+Positions with a value of 0 represent unknown values.
 \end{formalin}
 
 \begin{formalout}
@@ -23,7 +35,6 @@ Output the solved board with a single space between each value in a row and a ne
 0 11 0 29 0 47 0 65 0
 9 0 27 0 45 0 63 0 81
 \end{datain}
-
 \begin{dataout}
 1 18 19 36 37 54 55 72 73
 2 17 20 35 38 53 56 71 74
@@ -47,7 +58,6 @@ Output the solved board with a single space between each value in a row and a ne
 0 0 0 0 0 0 0 79 0
 1 0 0 0 17 0 0 0 81
 \end{datain}
-
 \begin{dataout}
 35 36 39 40 41 42 43 46 47
 34 37 38 55 54 53 44 45 48
@@ -59,5 +69,3 @@ Output the solved board with a single space between each value in a row and a ne
 4 3 14 19 18 75 74 79 80
 1 2 15 16 17 76 77 78 81
 \end{dataout}
-
-\end{problem}

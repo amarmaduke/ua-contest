@@ -1,1 +1,45 @@
-Todo: this
+\begin{problem}{B: Fibonacci}
+Eric really likes his recurrence relations.
+One of his favorites is the Fibonacci recurrence relation.
+That is, $F_n = F_{n-1} + F_{n-2}, F_0 = 0, F_1 = 1$.
+Of course, the initial conditions for Fibonacci can take one more than just those values.
+In fact, the Fibonacci initial conditions are regularly stated as either $(0, 1)$, $(1, 1)$ or $(1, 2)$.
+You can imagine that initial conditions that maintain the Fibonacci sequence are going to faithfully generate the sequence.
+
+But this got Eric thinking.
+What if we wrote the three separate recurrence relations down with the three more common initial conditions:
+
+$a_n = a_{n-1} + a_{n-2}, a_0 = 0, a_1 = 1$,
+
+$b_n = b_{n-1} + b_{n-2}, b_0 = 1, b_1 = 1$,
+
+$c_n = c_{n-1} + c_{n-2}, c_0 = 1, c_1 = 2$.
+
+Then, mix up the recurrences to make them all interdependent like this:
+
+$a_n = b_{n-1} + c_{n-2}, a_0 = 0, a_1 = 1$,
+
+$b_n = c_{n-1} + a_{n-2}, b_0 = 1, b_1 = 1$,
+
+$c_n = a_{n-1} + b_{n-2}, c_0 = 1, c_1 = 2$.
+
+While maintaining the same initial conditions.
+This got Eric really wondering, what would be the $n$th triple ($a_n$, $b_n$, $c_n$) of this interdependent relation?
+Well, Eric happens to be a busy guy, so he doesn't have time to figure it out on his own, so he's hired you to do the job.
+
+\end{problem}
+
+\begin{formalin}
+The input consists of one integer $n$ ($1 \leq n \leq 40$).
+\end{formalin}
+
+\begin{formalout}
+Output the resulting triple, $a_n$ $b_n$ $c_n$.
+\end{formalout}
+
+\begin{datain}
+6
+\end{datain}
+\begin{dataout}
+8 10 8
+\end{dataout}

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <utility>
-#include <tuple>
 #include <cmath>
 
 using namespace std;
@@ -21,7 +20,7 @@ vector<int> offsets(vector<string> &v)
 pair<int, int> bounds(vector<string> &v, int idx)
 {
    int pos = 0, i = 0;
-   while (pos < idx)
+   while (pos <= idx)
    {
       pos += (v[i].size() + 1);
       ++i;
@@ -53,7 +52,6 @@ int main()
       vector<int> off = offsets(words);
       int lidx = abs(off[l] - t);
       int ridx = abs(off[r] - t);
-      //cout << l << " " << lidx << " " << off[l] << " " << t << endl;
       if (l + lidx < r + ridx)
       {
          cout << (l + lidx) << " " << words[l][lidx] << endl;
