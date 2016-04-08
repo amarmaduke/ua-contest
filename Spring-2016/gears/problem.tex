@@ -1,50 +1,45 @@
-\begin{problem}{A: Operations}
+\begin{problem}{D: The Wheel Apparatus}
+Kacey has a peculiar apparatus of wheels that she wants to share with you.
+The apparatus rests on the ground with wheels of different radii.
+Each wheel has an associated crank to turn the wheel.
+With one revolution of a crank for a given wheel the apparatus moves a distance equal to the radius of the wheel.
+Kacey has spent a lot of time working on this apparatus of hers, and she's very proud of it.
+She's managed to grease the cranks in a fashion that the effort taken to crank one revolution is indistinguishable between all the wheels.
 
-Thomas is really, really bad at math.
-He is so incredibly bad at math that he can't compute simple operations.
-However, he is a pretty handsome guy and his charisma roll was high, so he's managed to convince you to help him out.
-
-In particular, Thomas needs you to tell him the answer to a computation of the form $x$ $op$ $y$, where $x$ and $y$ are single digit numbers, and ${op}$ is one of either $+, -, *, /$.
-For each given operation Thomas only cares about the truncated integral result.
-Thus, the result of $5 / 2$ is $2$, not $2.5$.
-Help Thomas out!
-
+She's a great mechanic, and not bad at math either, but she can't do everything, and that's where you come in.
+She figures it'd be good to know the minimum number of cranks it would take to move the apparatus exactly a distance $t$.
+Since the work of cranking each wheel is equivalent, she just wants to minimize her effort.
+To make it a bit harder, she's asked you to solve the problem for a generic apparatus of any setup of wheels.
+However, she also only cares about full revolutions of the crank, fractional revolutions should not be considered.
+As well, she doesn't what the possible apparatus to have two wheels of the same radius, so she wont give you a problem with non-unique radii.
+Clearly for any given apparatus it might not be possible to turn the cranks in integer revolutions to exactly traverse her desired distance.
+In this case Kacey just wants you to tell her it can't be done.
+She doesn't imagine this is a kind of problem she'll be able to solve quickly on her own.
+That's why Kacey's come to you to figure out the answer for her.
 \end{problem}
 
 \begin{formalin}
-The input consists of three characters $x$, $p$, and $y$.
-Both $x$ and $y$ are integers ($1 \leq x, y \leq 9$).
-And $p$ is either $+$, $-$, $*$, or $/$.
+The input consists of two lines.
+The first line has two integers, $n$ ($1 \leq n \leq 100$), the number of radii, and $t$ ($1 \leq t \leq 1000$), the target distance.
+The second line has $n$ integers $k_i$ ($1 \leq k_i \leq t$ for all $i$), the radii of the wheels.
 \end{formalin}
 
 \begin{formalout}
-Output the result of the integer operation.
+Output ``Possible:'' followed by the minimum number of crank revolutions required if it is possible and ``Impossible.'' otherwise.
 \end{formalout}
 
 \begin{datain}
-1 + 2
+4 9
+2 3 5 10
 \end{datain}
 \begin{dataout}
-3
+Possible: 3
 \end{dataout}
 
 \begin{datain}
-9 * 9
+2 7
+2 4
 \end{datain}
 \begin{dataout}
-81
-\end{dataout}
-
-\begin{datain}
-1 / 9
-\end{datain}
-\begin{dataout}
-0
-\end{dataout}
-
-\begin{datain}
-2 - 3
-\end{datain}
-\begin{dataout}
--1
+Impossible.
 \end{dataout}
