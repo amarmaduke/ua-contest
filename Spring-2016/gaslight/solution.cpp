@@ -13,6 +13,9 @@ int main() {
    cin >> kases;
    for (int kk = 0; kk < kases; ++kk)
    {
+      fill(distances, distances + 101, 0);
+      for (int i = 0; i < 101; ++i)
+         fill(connections[i], connections[i] + 101, 0);
 #endif
       cin >> n >> k >> m;
 
