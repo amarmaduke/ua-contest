@@ -1,0 +1,45 @@
+A. Troll
+Oh no there is a troll on the internet!
+Use this function f(x), to determine if this series of bits is from a troll!
+input: bitstring
+solution f(bitstring)
+output: Yes, No
+
+C. Hydra
+Hydras are really scary! Defeat this hydra in the minimum number of cuts!
+(using the hydra described in that one research paper)
+input: DAG
+solution: greedy?
+output: min # of cuts
+
+B. Beaver
+Beavers are incredible! They can go for eons!
+Determine if a beaver will get tired and stop in X steps or not!
+input: busy beaver turing machine
+solution: simulate for X steps
+output: Yes, No
+
+D. Dragon
+
+
+F. Ant
+Ant hill got flooded in! Oh no!
+You have X amounts of ants that survived!
+In a graph! Oh no! Graph problems are scary!
+You have target locations with larvae, get all the larvae out in the minimum
+number of steps possible! Using as many ants as are available to you!
+input: graph, ant locations, larvae locations, exit location
+solution: floyds (? can we do better?) + some trivial greedy assignments
+output: minimum number of steps
+
+E. Phoenix
+When a phoenix dies it can be reborn with one of many different colors.
+Each color has an associated cost. Each lifespan as an associated maximum lifetime.
+The Lifetime for the following life is Previous - cost of color + bonus.
+The Phoenix will die permanently if the next lifetime is 0 or negative.
+The Phoenix starts red with a lifetime of 10.
+Red: 5, Blue: 2, Orange: 9,
+What is the maximum cost of the course of x life times?
+input: Initial state, costs, maximum lifetime bound, bonus
+solution: dynamic?
+output: maximum cost possible
