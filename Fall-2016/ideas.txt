@@ -12,13 +12,6 @@ input: DAG
 solution: greedy?
 output: min # of cuts
 
-B. Beaver
-Beavers are incredible! They can go for eons!
-Determine if a beaver will get tired and stop in X steps or not!
-input: busy beaver turing machine
-solution: simulate for X steps
-output: Yes, No
-
 D. Dragon
 
 
