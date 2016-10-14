@@ -1,0 +1,60 @@
+\begin{problem}{Busy Beavers}
+
+Beaver is busy building her dam. She wants her structure to be as strong as possible, and it goes without saying that the eldest beaver is the most skilled when it comes to building. Because of this, Beaver will make a series of changes to her dam in an attempt to arrange her structure in the same configuration as the elder beaver’s.
+
+Every beaver knows a good dam is constructed from a combination of horizontal and vertically aligned logs. There are five actions Beaver can take. They are as follows:
+
+	* Move Right
+	* Move Left
+	* Turn the log at your position 90 degrees. Vertical logs become horizontal and horizontal become vertical.
+	* XOR the current log at your position such that
+		* If you are surrounded by two logs in the same position yours will become horizontal.
+		* If you are surrounded by logs in different position yours will become vertical.
+		* If you are to perform an XOR on a log and there are none to your left or right treat it as if there was a horizontal log there.
+	* Stop! A predator has been spotted. Beaver will scurry into her dam. This signifies the end of actions to be taken.
+
+Beaver wants to know if given the starting configuration of her dam and a list of transforms to apply, if she will at any point reach the same state as the elder beaver’s dam.
+
+\end{problem}
+
+\begin{formalin}
+Input consists of three lines. The first being Beaver’s starting dam configuration. The second being the elder beaver’s dam configuration that she’s trying to reach. The third is a list of actions that Beaver will perform on her dam to try to do so.
+
+Dam configuration will consists of 0 and 1 characters. 0 being horizontal and 1 being vertical. Dam length will be between 1 and 100 characters. The list of actions will be a concatenation of action symbols that will be taken: Move Right (R). Move Left (L). Turn the log (T). XOR the log (X). Stop (S). The actions list will be between 1 and 1,000 characters and will always end with the Stop action.
+
+Beaver's possition will always start at the leftmost log in her dam. It is guaranteed that she will never move past the boundaries of the dam.
+\end{formalin}
+
+\begin{formalout}
+Output if Beaver is able to at any point get the configuration of her dam to match that of the elder beavers.
+
+If she is able match the configuration, output YES. 
+If she never matches the configuration, output NO.
+\end{formalout}
+
+\begin{datain}
+010010
+110101
+TRRRRXRTLLTS
+\end{datain}
+\begin{dataout}
+YES
+\end{dataout}
+
+\begin{datain}
+010
+101
+TRXRTS
+\end{datain}
+\begin{dataout}
+NO
+\end{dataout}
+
+\begin{datain}
+1011
+1011
+S
+\end{datain}
+\begin{dataout}
+YES
+\end{dataout}
