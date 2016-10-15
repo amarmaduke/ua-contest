@@ -19,7 +19,7 @@ string makeDam(int size) {
 }
 
 int main() {
-	int NUM_TESTS = 10000;
+	int NUM_TESTS = 100;
 	
 	srand(time(NULL));
 
@@ -34,6 +34,8 @@ int main() {
 		string actionList = "";
 
 		int numActions = rand() % 900 + 99;
+
+		bool shouldTestPass = rand() % 10; 
 
 		int position = 1;
 		for (int actionNum = 0; actionNum < numActions; ++actionNum) {
@@ -60,8 +62,13 @@ int main() {
 			}
 		}
 
+		// If the test shouldn't pass just cut the action list in half and assum it won't break anything
+		if (!shouldTestPass) {
+			actionList = actionList.substr(0, actionList.size()/2 + 1);
+		}
+
 		in << startDam << endl << goalDam << endl << actionList << endl;
-		ans << "YES";
+		ans << (shouldTestPass ? "YES" : "NO");
 	}
 
 	return 0;
