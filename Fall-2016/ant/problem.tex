@@ -1,0 +1,62 @@
+\begin{problem}{Flooded Ant Hill}
+Last night a terrifying storm devastated a small previously growing ant hill.
+The ants inside the hill are distraught with grieve over the lose of their queen, but some larva remain.
+They collectively bet that one of those larva will hatch into a new queen.
+You know what they say, optimists are the most successful.
+
+Everyone knows that ants follow a hivemind.
+Even little Walter who was watching the devastation of the ant hill from nearby.
+Walter wondered how effective a human would be as the hivemind.
+That's where you come in.
+
+Your job is to be that hivemind and instruct the ants in an optimal way to save all the larva.
+The ant hill has been flooded extensively but the ants are still resilient enough to get anywhere in the ant hill.
+There are several rooms connected by tunnels of varying difficulty to pass through.
+Many ants can be in a room at one time, and so can many larva.
+There will only ever be a single exit from the ant hill.
+The exit from the ant hill is just another room (with an unspecified way of exiting).
+
+You can instruct ants to move anywhere inside the ant hill but you must move all larva to the exit room \textit{and} all ants.
+Given the rooms, the description of the connecting tunnels, the position of the ants, larvae, and the exit from the ant hill you need to compute the minimum difficulty required to save all the larva and ants.
+\end{problem}
+
+\begin{formalin}
+The first line of input will be two integers $n$ ($1 \leq n \leq 400$), the number of rooms, and $m$, the number of tunnels.
+The following line will be three integers $a$ ($1 \leq a \leq 10$), the number of ants, $\ell$ ($1 \leq \ell \leq 10$), the number of larva and $e$ the exit room.
+The next line will be the location of the $a$ ants.
+The following line will be the location of the $\ell$ larva.
+The remaining lines will be triples $u$, $v$, $d$, specifying a tunnel between rooms $u$ and $v$ with difficulty $d$.
+\end{formalin}
+
+\begin{formalout}
+Output will be one integer the minimum difficulty to save all larva and ants.
+\end{formalout}
+
+\begin{datain}
+5 5
+2 2 4
+1 3
+0 2
+0 4 1
+0 1 1
+1 3 1
+0 2 2
+2 3 10
+\end{datain}
+\begin{dataout}
+9
+\end{dataout}
+
+\begin{datain}
+5 4
+1 4 4
+0
+1 2 3 4
+0 1 1
+1 2 2
+2 3 3
+3 4 1
+\end{datain}
+\begin{dataout}
+7
+\end{dataout}
