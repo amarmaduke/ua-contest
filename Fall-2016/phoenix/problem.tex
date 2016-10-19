@@ -1,0 +1,48 @@
+\begin{problem}{Phoenix}
+The phoenix is the most beautiful and majestic of mythical beasts.
+As I am sure you are well aware, a phoenix is gifted with the ability to be reborn from it's own ashes.
+However, few know of the intricacies of this ability.
+
+Indeed, a phoenix has a total lifespan shared across all of its many rebirths.
+Each time a phoenix rebirths itself it can pick a particular color for its feathers.
+Different species of phoenix have different colors.
+Each color has a certain innate beauty to other phoenix but also an innate penalty to the total lifespan.
+After each rebirth a phoenix might also be revitalized and have there lifespan increased by some constant amount.
+
+A legendary phoenix watcher named Bernard has asked you to assist him in his general observations.
+He has studied phoenix for a very long time and now wants to know just how beautiful a phoenix can in it's lifespan.
+He is going to give you the computed lifespan, increased vitality on rebirth, beauty of colors, and penalty of colors.
+You are to tell him the maximum beauty the phoenix can achieve in it's lifespan.
+\end{problem}
+
+\begin{formalin}
+The first line of input will be one integer, $n$ ($1 \leq n \leq 100$), the number of colors.
+The second line of input will be two integers, $h$ ($1 \leq h \leq 1000$), the starting lifespan of the phoenix, and, $v$ ($0 \leq v < h$), the increased vitality per rebirth.
+The next line will consist of $n$ integers $b_i$ ($0 \leq b_i \leq 1000$) the associated beauty score for the color $i$.
+The final line will consist of $n$ integers $p_i$ ($0 \leq p_i < h$) the associated penalty for the color $i$.
+\end{formalin}
+
+\begin{formalout}
+Output the maximum possible beauty for the phoenix in it's lifespan.
+If this value is unbounded output ``Infinite.''
+\end{formalout}
+
+\begin{datain}
+3
+10 1
+2 3 9
+2 3 9
+\end{datain}
+\begin{dataout}
+27
+\end{dataout}
+
+\begin{datain}
+2
+10 10
+1 1
+1 1
+\end{datain}
+\begin{dataout}
+Infinite.
+\end{dataout}
