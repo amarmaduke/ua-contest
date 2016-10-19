@@ -1,0 +1,47 @@
+\begin{problem}{There is a TROLL on the Internet}
+There is a TROLL on the Internet!
+In fact, there are many trolls out there!
+As ridiculous as it sounds, it's quite true.
+
+Amber has come up with an idea to catch the trolls in the act, and she's asking for your help in implementing her idea.
+You see, Amber knows that all text is really just encoded in binary, ones and zeroes.
+So, if you take the binary encoding of the troll's text, and then apply this super special secret function you can discover if they're a troll.
+
+The function is very simple, but if the trolls ever found out about it, it would all be ruined, so be careful.
+Okay, here it is.
+Create a new binary vector from the trolls binary vector in the following way:
+Copy the first bit.
+For every other bit, in order, inspect the trolls corresponding bit to see if it's a 1 or a 0.
+If it's a 1, then add the bitwise-and between the trolls current bit and his previous bit to your binary vector.
+If it's a 0, then add the bitwise-or between the trolls current bit and his previous bit to your binary vector.
+
+After you've completed constructing your new binary vector check to see if any of the bits are a 1.
+If any of the bits are a 1 then the text is not a troll!
+Otherwise, it is!
+\end{problem}
+
+\begin{formalin}
+The first line of input will be one integer, $n$, ($1 \leq n \leq 10$) the number of bits.
+The following line of input will be $n$ space separated integers that will either be $1$ or $0$.
+\end{formalin}
+
+\begin{formalout}
+If the algorithm reveals that the owner of the text is a troll then output ``Yes.''
+Otherwise output ``No.''
+\end{formalout}
+
+\begin{datain}
+5
+1 0 1 0 1
+\end{datain}
+\begin{dataout}
+No.
+\end{dataout}
+
+\begin{datain}
+5
+0 0 0 0 0
+\end{datain}
+\begin{dataout}
+Yes.
+\end{dataout}
