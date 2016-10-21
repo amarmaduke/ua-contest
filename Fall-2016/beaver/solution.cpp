@@ -13,7 +13,7 @@ int main() {
         goalDam = "0" + goalDam + "0";
 
 	for (int i = 0, myPos = 1; i < actions.size() - 1 && myDam != goalDam; ++i) {
-		
+
 		if (actions[i] == 'R') {
                         ++myPos;
                 } else if (actions[i] == 'L') {
@@ -25,7 +25,7 @@ int main() {
                 }
 	}
 
-        cout << (myDam == goalDam ? "YES" : "NO") << endl;
+        cout << (myDam == goalDam ? "Yes." : "No.") << endl;
 
         return 0;
 }
