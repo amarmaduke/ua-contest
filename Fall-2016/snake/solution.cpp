@@ -113,7 +113,7 @@ int main() {
         set_hand_position(1, suit_ids[hands_input[1][card].second], card_ids[hands_input[1][card].first], 1);
     }
 
-    if (winning_state == 1) cout << "WIN\n";
-    else if (winning_state == 0) cout << "TIE\n";
-    else cout << "LOSE\n";
+    if (winning_state == 1) cout << "Win.\n";
+    else if (winning_state == 0) cout << "Tie.\n";
+    else cout << "Lose.\n";
 }
