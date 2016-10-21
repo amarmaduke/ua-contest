@@ -54,10 +54,10 @@ int solve(int a, int l, int e) {
 }
 
 int main() {
-   while (true) {
+//   while (true) {
       int n, m;
       cin >> n >> m;
-      if (n == 0 && m == 0) break;
+//      if (n == 0 && m == 0) break;
 
       for (int i = 0; i < n; ++i) {
          for (int j = 0; j < n; ++j) {
@@ -93,5 +93,5 @@ int main() {
 
       floyds(n);
       cout << solve(ants, larvae, e) << endl;
-   }
+//   }
 }

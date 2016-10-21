@@ -126,14 +126,14 @@ int solve() {
 }
 
 int main() {
-   while (true) {
+//   while (true) {
       int n;
       cin >> n;
-      if (n == 0) break;
+//      if (n == 0) break;
 
       int m = n - 1;
 
-      nodes.clear();
+//      nodes.clear();
 
       for (int i = 0; i <= n; ++i) {
          Node x;
@@ -148,5 +148,5 @@ int main() {
       }
 
       cout << solve() << endl;
-   }
+//   }
 }

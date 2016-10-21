@@ -19,8 +19,8 @@ string makeDam(int size) {
 }
 
 int main() {
-	int NUM_TESTS = 100;
-	
+	int NUM_TESTS = 10;
+
 	srand(time(NULL));
 
 	// Generate tests by getting a dam config, then applying transforms while recording the actions
@@ -28,14 +28,14 @@ int main() {
 	for (int test = 4; test <= NUM_TESTS; ++test) {
 		ofstream in("test" + to_string(test) + ".in");
 		ofstream ans("test" + to_string(test) + ".ans");
-		
+
 		string startDam = "0" + makeDam(rand() % 100 + 1) + "0";
 		string goalDam = startDam;
 		string actionList = "";
 
 		int numActions = rand() % 900 + 99;
 
-		bool shouldTestPass = rand() % 10; 
+		bool shouldTestPass = rand() % 10;
 
 		int position = 1;
 		for (int actionNum = 0; actionNum < numActions; ++actionNum) {
@@ -45,12 +45,12 @@ int main() {
 			if ((action == 'L' && position == 1) || (action == 'R' && position == startDam.size() - 2)) {
 				--actionNum;
 				continue;
-			} 
+			}
 
 			actionList += action;
 
 			if (action == 'L') {
-				--position;				
+				--position;
 			} else if (action == 'R') {
 				++position;
 			} else if (action == 'T') {
@@ -73,4 +73,3 @@ int main() {
 
 	return 0;
 }
-

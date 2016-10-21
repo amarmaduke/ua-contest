@@ -26,11 +26,11 @@ int solve(int life, int n) {
 
 int main() {
 
-   while (true) {
+//   while (true) {
       int n;
       cin >> n;
-      if (n == 0) break;
-      memo.clear();
+//      if (n == 0) break;
+//      memo.clear();
 
       int lifetime, bonus;
       cin >> lifetime >> bonus;
@@ -54,5 +54,5 @@ int main() {
       } else {
          cout << "Infinite." << endl;
       }
-   }
+//   }
 }

@@ -4,10 +4,10 @@
 using namespace std;
 
 int main() {
-   while (true) {
+//   while (true) {
       int n;
       cin >> n;
-      if (n == 0) break;
+//      if (n == 0) break;
 
       vector<int> input(n);
       for (int i = 0; i < n; ++i) {
@@ -41,5 +41,5 @@ int main() {
       } else {
          cout << "No." << endl;
       }
-   }
+//   }
 }
