@@ -6,10 +6,11 @@ As ridiculous as it sounds, it's quite true.
 Amber has come up with an idea to catch the trolls in the act, and she's asking for your help in implementing her idea.
 You see, Amber knows that all text is really just encoded in binary, ones and zeroes.
 So, if you take the binary encoding of the troll's text, and then apply this super special secret function you can discover if they're a troll.
+It's that one simple trick that trolls do not want you to know - and I'm going to tell you what it is.
 
 The function is very simple, but if the trolls ever found out about it, it would all be ruined, so be careful.
 Okay, here it is.
-Create a new binary vector from the trolls binary vector in the following way:
+Create a new binary vector from the potential troll's binary vector in the following way:
 Copy the first bit.
 For every other bit, in order, inspect the trolls corresponding bit to see if it's a 1 or a 0.
 If it's a 1, then add the bitwise-and between the trolls current bit and his previous bit to your binary vector.
