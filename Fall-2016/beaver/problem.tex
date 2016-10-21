@@ -4,14 +4,19 @@ Beaver is busy building her dam. She wants her structure to be as strong as poss
 
 Every beaver knows a good dam is constructed from a combination of horizontal and vertically aligned logs. There are five actions Beaver can take. They are as follows:
 
-	* Move Right
-	* Move Left
-	* Turn the log at your position 90 degrees. Vertical logs become horizontal and horizontal become vertical.
-	* XOR the current log at your position such that
-		* If you are surrounded by two logs in the same position yours will become horizontal.
-		* If you are surrounded by logs in different position yours will become vertical.
-		* If you are to perform an XOR on a log and there are none to your left or right treat it as if there was a horizontal log there.
-	* Stop! A predator has been spotted. Beaver will scurry into her dam. This signifies the end of actions to be taken.
+\begin{itemize}
+ 	\item Move Right
+	\item Move Left
+	\item Turn the log at your position 90 degrees. Vertical logs become horizontal and horizontal become vertical.
+	\item { XOR the current log at your position such that
+	\begin{itemize}
+		\item If you are surrounded by two logs in the same position yours will become horizontal.
+		\item If you are surrounded by logs in different position yours will become vertical.
+		\item If you are to perform an XOR on a log and there are none to your left or right treat it as if there was a horizontal log there.
+	\end{itemize}
+	}
+	\item Stop! A predator has been spotted. Beaver will scurry into her dam. This signifies the end of actions to be taken.
+\end{itemize}
 
 Beaver wants to know if given the starting configuration of her dam and a list of transforms to apply, if she will at any point reach the same state as the elder beaver’s dam.
 
@@ -25,10 +30,12 @@ Dam configuration will consists of 0 and 1 characters. 0 being horizontal and 1 
 Beaver's possition will always start at the leftmost log in her dam. It is guaranteed that she will never move past the boundaries of the dam.
 \end{formalin}
 
+\newpage
+
 \begin{formalout}
 Output if Beaver is able to at any point get the configuration of her dam to match that of the elder beaver's.
 
-If she is able match the configuration, output YES. 
+If she is able match the configuration, output YES.
 If she never matches the configuration, output NO.
 \end{formalout}
 

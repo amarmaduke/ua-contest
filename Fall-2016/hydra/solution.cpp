@@ -127,9 +127,11 @@ int solve() {
 
 int main() {
    while (true) {
-      int n, m;
-      cin >> n >> m;
-      if (n == 0 && m == 0) break;
+      int n;
+      cin >> n;
+      if (n == 0) break;
+
+      int m = n - 1;
 
       nodes.clear();
 
