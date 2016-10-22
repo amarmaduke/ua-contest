@@ -25,7 +25,7 @@ int main() {
                 }
 	}
 
-        cout << (myDam == goalDam ? "Yes." : "No.") << endl;
+        cout << (myDam == goalDam ? "Yes." : "No.") << "\r\n";
 
         return 0;
 }
