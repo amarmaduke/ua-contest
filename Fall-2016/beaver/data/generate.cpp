@@ -58,7 +58,7 @@ int main() {
 			} else if (action == 'X') {
 				goalDam[position] = (goalDam[position-1] == goalDam[position+1] ? '0' : '1');
 			} else {
-				cout << "wtf is going on\r\n";
+				cout << "wtf is going on\n";
 			}
 		}
 
@@ -69,8 +69,8 @@ int main() {
 			actionList = actionList.substr(0, actionList.size()/2 + 1);
 		}
 
-		in << startDam << "\r\n" << goalDam << "\r\n" << actionList << "\r\n";
-		ans << (shouldTestPass ? "Yes." : "No.") << "\r\n";
+		in << startDam.substr(1, startDam.size() - 2) << "\n" << goalDam.substr(1, goalDam.size() - 2) << "\n" << actionList << "\n";
+		ans << (shouldTestPass ? "Yes." : "No.") << "\n";
 	}
 
 	return 0;
