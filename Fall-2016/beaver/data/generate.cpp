@@ -58,17 +58,19 @@ int main() {
 			} else if (action == 'X') {
 				goalDam[position] = (goalDam[position-1] == goalDam[position+1] ? '0' : '1');
 			} else {
-				cout << "wtf is going on" << endl;
+				cout << "wtf is going on\r\n";
 			}
 		}
+
+		actionList += "S";
 
 		// If the test shouldn't pass just cut the action list in half and assum it won't break anything
 		if (!shouldTestPass) {
 			actionList = actionList.substr(0, actionList.size()/2 + 1);
 		}
 
-		in << startDam << endl << goalDam << endl << actionList << endl;
-		ans << (shouldTestPass ? "YES" : "NO");
+		in << startDam << "\r\n" << goalDam << "\r\n" << actionList << "\r\n";
+		ans << (shouldTestPass ? "Yes." : "No.") << "\r\n";
 	}
 
 	return 0;
