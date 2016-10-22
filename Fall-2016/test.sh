@@ -2,7 +2,7 @@
 
 Cases=$2
 
-g++ $1/solution.cpp -DSINGLE_FILE -o $1/solution
+g++ -std=c++11 $1/solution.cpp -DSINGLE_FILE -o $1/solution
 
 for ((i=1; i<=Cases; i++)); do
    infile="$1/data/test$i.in"
