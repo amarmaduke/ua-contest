@@ -1,0 +1,32 @@
+
+
+1. Polish Calculator (Simulation)
+    Your friend wants you to write a calculator for him,
+    because he loves polish notation.
+    And his calculator doesn't do that.
+
+2. Catalan Numbers (Dynamic Programming n^2 )
+    Given n, how many different ways can you match n-pairs of paranthesis?
+    Blah-blah is interested in different encodings of numbers for his new slick programming language Parenren
+    He wants to know just how many different ways he can put things together
+
+3. Generate Constrained Strings (Brute Forcing + Backtracking?)
+    Generate the nth lexographically ordered string
+    but don't count strings that have these substrings!
+
+4. Compute Powers of 2 (Dirt Simple, nothing larger than 2^30)
+
+5. Integer Sequences + Range Queries (Dynamic Programming + Segment or Fenwick Tree)
+    Given two recurrence relations
+
+6. Shortest Path with p-adic numbers (Graphs + Implementation)
+    Given a quick debrief on p-adic numbers, or at least the "metric space"
+    Figure out that what we want is shortest path, implement a p-adic number,
+    then implement dijkstras to solve
+
+
+--- Cut --- (Below this lines are ideas that are cut)
+4. Minimum Piano Hand Transitions (Dynamic Programming)
+    Given a position of one hand on the piano, and ways in which you can move
+    Find the minimum cost path across the piano such that you can play all the chords
+Why? Catalan numbers above went from "just know the formula" to "dynamic programming" making this one redundant
