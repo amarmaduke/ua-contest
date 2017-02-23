@@ -1,6 +1,7 @@
 #!/bin/bash
 
-Cases=$2
+count=$(find ./$1/data -maxdepth 1 -type f|wc -l)
+Cases=$((count / 2))
 
 g++ $1/solution.cpp -DSINGLE_FILE -o $1/solution
 
