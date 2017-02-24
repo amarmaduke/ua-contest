@@ -22,10 +22,9 @@ int main()
     for (int i = n - 1; i >= 0; i--)
     {
         char c = program[i];
-        if (c >= '0' && c <= '9')
+        if (c != '+' && c != '-' && c != 'x' && c != '/')
         {
-            int x = c - '0';
-            nums.push(x);
+            nums.push(c - '0');
         }
         else
         {
@@ -48,7 +47,7 @@ int main()
             }
         }
     }
-
+    
     int result = nums.top();
     cout << result << endl;
 }
