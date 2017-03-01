@@ -93,6 +93,7 @@ int main()
 
     for (int i = 0; i < nodes.size(); ++i)
     {
-        cout << nodes[i].label << " " << nodes[i].dist << endl;
+        int d = nodes[i].dist == INF ? -1 : nodes[i].dist;
+        cout << nodes[i].label << " " << d << endl;
     }
 }
