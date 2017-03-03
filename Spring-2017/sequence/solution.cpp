@@ -142,6 +142,6 @@ int main()
         cin >> l >> r;
         r = min((size_t)r, prefix.size() - 1);
         l = min((size_t)l, prefix.size() - 1);
-        cout << (prefix[r] - prefix[l]) << endl;
+        cout << (prefix[r] - prefix[l - 1]) << endl;
     }
 }
