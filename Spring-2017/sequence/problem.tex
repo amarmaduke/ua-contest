@@ -1,11 +1,52 @@
 \begin{problem}{F: The Sequence Sequence Sequence}
+Johnny loves playing games with lists of numbers.
+One of his favorite games is to sum the numbers up in the list.
+Johnny is a bit of a prodigy, Gauss himself would be proud.
+His mother, Abigail, decided that Johnny needs to push his talents farther so that he can grow intellectually.
 
+First Abigail decided that Jonny should start summing two lists at a time instead of just one.
+This seemed at first like a decent enough difficulty but Johnny quickly overcame it.
+Abigail decided that it was too time consuming to write out a whole list each time Johnny wanted a new problem.
+So, she modified the problem slightly to give Johnny two formulas for generating the lists instead of the lists themself.
+The the first formula would consist of $n$ coefficients and $n$ starting numbers.
+The second formula would consist of $m$ coeffiecents and $m$ starting numbers.
+The next number in the list, the $n+1$st number, would be the linear combination of the coefficients and the preceding numbers.
+For example, given starting positions $a_i$ and coefficients $c_i$:
+
+$a_0 = 1$, $a_1 = 2$, $a_3 = 3$, $c_0 = 0$, $c_1 = 1$, $c_2 = 2$
+
+then, $c_3 = c_2*a_2 + c_1*a_1 + c_0*a_0 = 2*1 + 1*2 + 0*3 = 4$.
+$c_4$ would then be calucated with $c_3$, $c_2$, and $c_1$ (and the corresponding $a_i$s).
+
+Much to Abigai's chagrin and amazement Johnny quickly conquered this task as well.
+It seemed that she would need to increase the difficulty to something less to do with numbers and more to do with something else.
+Abigail's next trick was to have Johnny sum up the longest shared list between the two lists instead of the lists individually.
+
+She explained to Johnny what she meant by shared in the following way:
+Johnny was allowed to remove an element from a list, but he had to find the fewest number of deletions such that the two lists where equal.
+Johnny then had to sum just one of the lists, since they would yield the same sum.
+
+Abigail was proud of herself and her son.
+He didn't take to this problem as easily as the first, but all the same he managed it after a few months.
+Resolute, Abigail decided one final modification, but she's requested your help in making sure that she gets the right answers in order to check Johnny's work.
+
+Abigail wants to ask Johnny to sum a range of the list instead of the entire list.
+Johnny should be able to answer $q$ queries by range of the list, not just a few.
+You're job is to write a program that will give the answer for Abigail so she can double check Johnny's work.
 \end{problem}
 
 \begin{formalin}
+The input begins with two integers $n$, the number of coefficients, and $t_n$, the total number of terms in the first list.
+The next line is $2n$ integers, the first $n$ are the coefficients, $c_i$, in order from first to last.
+The second $n$ integers are the starting values for the list, $a_i$, in order from first to last.
+The next line is another two integers $m$, the number of coefficients, and $t_m$, the total number of terms in the second list.
+The next line is $2m$ integers, shaped similarly to the previous list of coefficients an starting terms.
+The next line is one integer, $q$, the number of queries.
+The following $q$ lines are two integers, $l_i$ and $r_i$, which form a range $[l_i, r_i]$ that Johnny should sum over.
 \end{formalin}
 
 \begin{formalout}
+For each query output one integer that is the sum from $l_i$ to $r_i$ of the shared list.
 \end{formalout}
 
 \begin{datain}
