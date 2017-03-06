@@ -1,0 +1,49 @@
+\begin{problem}{C: Snek}
+
+Jastion likes playing the raddest games, like slither.io and agar.io.
+He's a bit of a hipster though, so he likes doing things before they are cool.
+He realizes that if he makes his own spin-off of one of these games that he'll definitely be playing it before it is cool.
+
+Jastion decides to make a game called snek.io, where a bunch of sneks roam around and eat each other to get bigger.
+He made some pretty bad decisions with the game and it's not very fun.
+First, a snek can only eat the snek closest to its size and larger than it.
+Sneks grow each time they eat another snek, but the amount they grow is constant so it does not matter how big the sneks they eat are.
+
+All of the other players' sneks start out at various sizes, but Jastion's snek always starts at size $0$ (it's very small!).
+This means that the first snek the Jastion may eat must be the next smallest one.
+Once that snek is eaten and Jastion's snek grows, he must then eat the next snek that is larger than him and closest to its size.
+He will continue to do this until he is the largest snek.
+
+Because of Jastion's odd choices with this game, none of the other players can figure out how to eat the other sneks.
+Jastion is the only one who understands the rules properly, therefore his snek is the only one that will eat other sneks.
+
+Jastion wants your help.
+Given a list of the sizes of the other sneks' sizes, and the amount Jastion's snek will grow each time he eats a snek, he wants you to tell him which sneks may he eat in the order he may eat them.
+\end{problem}
+
+\begin{formalin}
+The first line contains two integers. The first, $n$ ($1 \leq n \leq 10^5$), is the amount of sneks other than Jastion's in the game.
+The second, $m$ ($1 \leq m \leq 10^5$), is the amount that Jastion's snek will grow after each snek he eats.
+
+The second line contains integers $s$ ($1 \leq s \leq 10^9$) from $s_1$ to $s_n$, the $i$th of which corresponds to the size of the snek in the $i$th position.
+\end{formalin}
+
+\begin{formalout}
+On a single line, output the positions of the sneks that Jastion's snek may eat in the order he may eat them.
+\end{formalout}
+
+\begin{datain}
+10 1
+1 2 3 4 5 6 7 8 9 10
+\end{datain}
+\begin{dataout}
+1 2 3 4 5 6 7 8 9 10
+\end{dataout}
+
+\begin{datain}
+10 2
+1 2 3 4 5 6 7 8 9 10
+\end{datain}
+\begin{dataout}
+1 3 5 7 9
+\end{dataout}
