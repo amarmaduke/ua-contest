@@ -1,11 +1,13 @@
 #include <iostream>
 #include <set>
+#include <map>
 #include <algorithm>
 
 using namespace std;
 
 set<int> sneks;
-int input, n, size_increase, indexes[300002];
+int input, n, size_increase;
+map<int, int> indexes;
 long long current_size = 0;
 
 int main()
@@ -18,15 +20,18 @@ int main()
         indexes[input] = i + 1;
     }
 
-    string result = "";
-    auto snek_to_eat = sneks.upper_bound(current_size);
-    
+    set<int>::iterator snek_to_eat = sneks.upper_bound(current_size);
+    cout << indexes[*snek_to_eat];
+    sneks.erase(snek_to_eat);
+    current_size += size_increase;
+    snek_to_eat = sneks.upper_bound(current_size);
+
     while (snek_to_eat != sneks.end()) {
-        result += (result != "" ? " " : "") + to_string(indexes[*snek_to_eat]);
+        cout << " " << indexes[*snek_to_eat];
         sneks.erase(snek_to_eat);
         current_size += size_increase;
         snek_to_eat = sneks.upper_bound(current_size);
     }
 
-    cout << result << "\n";
+    cout << "\n";
 }
