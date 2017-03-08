@@ -140,8 +140,8 @@ int main()
     {
         int l, r;
         cin >> l >> r;
-        r = min((size_t)r, prefix.size() - 1);
-        l = min((size_t)l, prefix.size() - 1);
-        cout << (prefix[r] - prefix[l - 1]) << endl;
+        r = max(min((size_t)r, prefix.size() - 1), (size_t)0);
+        l = max(min((size_t)l, prefix.size() - 1), (size_t)0);
+        cout << (prefix[r] - prefix[max(l - 1, 0)]) << endl;
     }
 }
