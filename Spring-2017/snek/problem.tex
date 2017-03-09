@@ -1,4 +1,4 @@
-\begin{problem}{C: Snek}
+\begin{problem}{E: Snek Game}
 
 Jastion likes playing the raddest games, like slither.io and agar.io.
 He's a bit of a hipster though, so he likes doing things before they are cool.
@@ -10,15 +10,15 @@ First, a snek can only eat the snek closest to its size and larger than it.
 Sneks grow each time they eat another snek, but the amount they grow is constant so it does not matter how big the sneks they eat are.
 
 All of the other players' sneks start out at various sizes, but Jastion's snek always starts at size $0$ (it's very small!).
-This means that the first snek the Jastion may eat must be the next smallest one.
-Once that snek is eaten and Jastion's snek grows, he must then eat the next snek that is larger than him and closest to its size.
+This means that the first snek that Jastion eats must be the next smallest one.
+Once that snek is eaten and Jastion's snek grows, he must then eat the next snek that is closest to its size but larger than him.
 He will continue to do this until he is the largest snek.
 
 Because of Jastion's odd choices with this game, none of the other players can figure out how to eat the other sneks.
 Jastion is the only one who understands the rules properly, therefore his snek is the only one that will eat other sneks.
 
 Jastion wants your help.
-Given a list of the sizes of the other sneks' sizes, and the amount Jastion's snek will grow each time he eats a snek, he wants you to tell him which sneks may he eat in the order he may eat them.
+Given a list of the other sneks' sizes, and the amount Jastion's snek will grow each time he eats a snek, he wants you to tell him which sneks he should eat and the order he should eat them.
 \end{problem}
 
 \begin{formalin}

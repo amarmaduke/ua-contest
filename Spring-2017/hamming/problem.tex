@@ -1,11 +1,11 @@
-\begin{problem}{A: Hamming}
-Edward and his colleagues of been trying to transfer messages along photoluminacent wires.
+\begin{problem}{D: Photons for Sale}
+Edward and his colleagues have been trying to transfer messages along photoluminescent wires.
 It's a brand new technology and just recently they've been able to encode bits with photons.
-A chip can hold a certain bit representation and there is a cost of moving the photon energy from one chip along the wire to another.
-The cost of moving from a chip with the bit representation 101 to one with 100 is a single unit of energy.
-For every bit in the representation that changes it costs one unit of energy to move the photons.
+A chip can hold a certain bit representation but there is a cost of moving the photons from one chip along the wire to a different chip.
+The cost of moving from a chip with the bit representation 101 to another with 100 is a single unit of energy.
+For every bit in the representation that changes between the initial chip and the target chip it costs one unit of energy.
 
-Moving photons along the wire is particularly expensive, but Edward only cares about getting to a certain bit representation from a starting one.
+Moving photons along the wire is particularly expensive but Edward only cares about getting to a certain bit representation from a starting chip.
 Your job is to figure out the minimum cost it would take to get to all other possible chips from a given chip.
 Not all chips are necessarily directly connected by wires and some chips might not be reachable at all.
 \end{problem}
@@ -13,12 +13,13 @@ Not all chips are necessarily directly connected by wires and some chips might n
 \begin{formalin}
 The first line of input consists of two integers, $n$ ($1 \leq n \leq 100$), the number of chips, and $m$ ($1 \leq m < \frac{n(n-1)}{2}$), the number of wires connecting chips.
 The next $n$ lines consist of a bit representation, a sequence of $0$s and $1$s, these sequences wont be longer than $100$ characters.
-The next $m$ lines consist of two integers, the wire connection between two wires.
+The next $m$ lines consist of two integers, the wire connection between two chips.
 The final line of input is the initial chip.
 \end{formalin}
 
 \begin{formalout}
 Output $n$ lines, the chips bit representation in order that they were given in the input, and the cost to reach that chip from the initial chip.
+If a chip can not be reached from the initial chip then output $-1$ as the cost instead.
 \end{formalout}
 
 \begin{datain}
@@ -45,7 +46,6 @@ Output $n$ lines, the chips bit representation in order that they were given in 
 0000 3
 1011 2
 \end{dataout}
-
 \begin{datain}
 5 5
 0000000000

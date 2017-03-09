@@ -1,12 +1,12 @@
-\begin{problem}{A: Polish Calculator}
+\begin{problem}{B: The Polish Calculator}
 Polly loves polish notation.
 She loves it more than any other kind of notation, integral notation, differential notation, standard notation...
 She loves polish notation.
 Polish notation is read from right to left.
-Numbers are pushed on to a stack.
-Operations pop two numbers from the stack (or the calculator will error if two numbers are not on the stack) and evaluates the expression.
-The first number as the left operand, the second number as the right operand.
-A polish notation for a computation is considered ``well-founded'' if the stack has only one number after all symbols are processed, the result.
+A number is pushed on to a virtual stack.
+Operations pop two numbers from the virtual stack (or the calculator will error if two numbers are not on the stack) and evaluates the operation.
+The first number on the virtual stack is the left operand and the second number is the right operand.
+An expression in polish notation is considered ``well-founded'' if the virtual stack has only one number after all operations are processed.
 
 Polly wants you to implement a calculator for arithmetic expressions in polish notation.
 To make things a little easier for you the numbers are only from 1 to 9.
@@ -16,6 +16,7 @@ Furthermore, you should take the floor of all division operations.
 \begin{formalin}
 The first line of input is one integer $n$ ($1 \leq n \leq 25$), the number of symbols.
 The next line consists of $n$ space separated symbols, the symbols are either $+$, $-$, $x$, $/$ or a number between $1$ and $9$.
+All expressions are well-founded.
 \end{formalin}
 
 \begin{formalout}

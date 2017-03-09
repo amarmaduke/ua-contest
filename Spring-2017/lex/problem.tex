@@ -1,4 +1,4 @@
-\begin{problem}{A: Favorite Words}
+\begin{problem}{C: Favorite Words}
 Vanessa is trying to find her favorite collection of ``words.''
 A ``word'' for Vanessa is any sequence of four letters, where a letter is a lowercase letter from the English alphabet.
 The letters ``a'', ``b'', ..., ``z'' are the valid letters.
@@ -8,15 +8,18 @@ On some days Vanessa really dislikes certain letters.
 Sometimes she wants a lot of words, sometimes not a lot.
 Her dream app is to have a ``word of the day'' program that adheres to her specific interests.
 She's asked you to write a program to find her the collection of words she's most into on any particular day.
+
+Specifically, she wants you to give her a contiguous list of words that do not have any letters she dislikes.
+To keep things interesting, she also wants the list of words to start after skipping some number of initial words so she doesn't get the same list every time for the same disliked letters.
 \end{problem}
 
 \begin{formalin}
-The first line consists of three integers, $n$ ($1 \leq n \leq 25$), the number of characters Vanessa dislikes, $m$ ($1 \leq m \leq 3 \dot 10^5$), the $m$th word you should start recording, and $k$ ($1 \leq k \leq 100$), the number of words in the collection.
+The first line consists of three integers, $n$ ($1 \leq n \leq 25$), the number of characters Vanessa dislikes, $m$ ($1 \leq m \leq 3 \times 10^5$), the $m$th word you should start recording, and $k$ ($1 \leq k \leq 100$), the number of words in the collection.
 The next line consists of $n$ alpha letters, the letters that Vanessa dislikes.
 \end{formalin}
 
 \begin{formalout}
-Output $k$ ``words'', one word on each line, the ``words of the day''.
+Output $k$ ``words'', one word on each line, the ``words of the day.''
 \end{formalout}
 
 \begin{datain}

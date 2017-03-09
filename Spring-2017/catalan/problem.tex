@@ -1,20 +1,21 @@
-\begin{problem}{B: The Parenren Language}
+\begin{problem}{G: The Parenren Language}
 
-Searle has come up with a new interesting programming language.
-It consists of only paranthesis characters, $($ and $)$.
-The left most paranthesis, $($, will put the number $1$ on a virtual stack.
-Having two left most parenthesis next together, like $(($, will still put the number $1$ on a virtual stack and perform a nand operation.
-Having three left most parentehsis next together, like $((($, will still put the number $1$ on the virtual stack and perform a nor operation.
-The program evaluator is greedy, so the nor operation consisting of three left paranthesis will be performed always over the other two if possible.
+Searle has come up with a new \textit{interesting} programming language.
+It consists of only parenthesis characters, $($ and $)$.
+The left most parenthesis, $($, will put the number $1$ on a virtual stack.
+Having two left parenthesis characters together, like $(($, will still put the number $1$ on a virtual stack and perform a \texttt{nand} operation.
+Having three left parenthesis characters together, like $((($, will still put the number $1$ on the virtual stack and perform a \texttt{nor} operation.
+The program evaluator is greedy, so the \texttt{nor} operation consisting of three left parenthesis will be performed first always over the other two if possible.
 
-A nand operation will pop off two numbers from the stack, ``and'' them, and then ``not'' the result.
-So for example, 1 nand 1 will give 0, and 0 nand 1 will give 1.
-A nor operation will pop off two numbers from the stack, ``or'' them, and then ``not'' the result.
+A \texttt{nand} operation will pop off two numbers from the stack, ``and'' them, and then ``not'' the result.
+So for example, \texttt{1 nand 1} will give 0, and \texttt{0 nand 1} will give 1.
+A \texttt{nor} operation will pop off two numbers from the stack, ``or'' them, and then ``not'' the result.
 
-After each nand or nor operation the result is put on the virtual stack.
+After each \texttt{nand} or \texttt{nor} operation the result is put on the virtual stack.
 
-A right most paranthesis will pop a number from the top of the virtual stack and print it to the screen.
-On caveat is that every left paranthesis must be paired with a right parenthesis to make parsing the language simple.
+A right most parenthesis will pop a number from the top of the virtual stack and print it to the screen.
+One caveat is that every left parenthesis must be paired with a right parenthesis to make parsing the language simple.
+If there is nothing on the virtual stack to be printed when a right parenthesis is evaluated then it does nothing.
 Here are some example programs:
 
 $((()()))$
@@ -23,8 +24,8 @@ $()()()$
 
 $(()((()))())$
 
-Searle is confident that this new programming language is turing complete, but he is curious about how expressive it is.
-Given a number $n$, the number of paired paranthesis, Searle wants you to determine how many possible programs there are.
+Searle is confident that this new \textit{interesting} programming language is Turing complete but he is curious about how expressive it is.
+Given a number $n$, the number of paired parenthesis, Searle wants you to determine how many possible programs there are.
 \end{problem}
 
 \begin{formalin}
