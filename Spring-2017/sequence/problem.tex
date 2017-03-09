@@ -1,9 +1,9 @@
 \begin{problem}{F: Parents Loving Sequence}
 Johnny loves playing games with lists of numbers.
-One of his favorite games is to sum the numbers up in the list.
+One of his favorite games is to sum the numbers up in a list.
 Johnny is a bit of a prodigy.
 Gauss himself would be proud.
-His mother, Abigail, decided that Johnny needs to push his talents farther so that he can grow intellectually.
+His mother, Abigail, decided that Johnny needed to push his talents farther so that he would grow intellectually.
 
 First Abigail decided that Johnny should start summing two lists at a time instead of just one.
 This seemed at first like a decent enough difficulty but Johnny quickly overcame it.
@@ -26,7 +26,7 @@ It seemed that she would need to increase the difficulty with something less to 
 Abigail's next trick was to have Johnny sum up the longest shared list between the two lists instead of the lists individually.
 
 She explained to Johnny what she meant by shared in the following way:
-Johnny was allowed to remove an element from a list, but he had to find the fewest number of deletions such that the two lists where equal.
+Johnny was allowed to remove elements from a list, but he had to find the fewest number of deletions such that the two lists were equal.
 Johnny then had to sum just one of the lists, since they would have the same length and the same numbers.
 
 Abigail was proud of herself and her son.
@@ -45,7 +45,7 @@ The second $n$ integers are the starting values for the list, $a_i$ ($-10 \leq a
 The next line is another two integers $m$ ($1 \leq m \leq 100$), the number of coefficients, and $t_m$ ($1 \leq t_m \leq 1000$), the total number of terms in the second list.
 The next line is $2m$ integers, shaped similarly to the previous list of coefficients and starting values.
 The next line is one integer, $q$ ($1 \leq q \leq 10000$), the number of queries.
-The following $q$ lines are two integers, $l_i$ ($l_i > 0$) and $r_i$ ($r_i > 0$), which form a range $[l_i, r_i]$ (specifically, $l_i < r_i$) that Johnny should sum over.
+The following $q$ lines are two integers, $l_i$ ($l_i > 0$) and $r_i$ ($r_i > 0$), which form a range $[l_i, r_i]$ (specifically, $l_i \leq r_i$) that Johnny should sum over.
 If $l_i$ or $r_i$ are larger than the length of the shared list then they should be rounded down to match only the largest valid range for the shared list.
 If the shared list is empty then the query range should be ignored and the result should be $0$ for each query.
 \end{formalin}

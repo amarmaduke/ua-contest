@@ -3,8 +3,8 @@
 Searle has come up with a new \textit{interesting} programming language.
 It consists of only parenthesis characters, $($ and $)$.
 The left most parenthesis, $($, will put the number $1$ on a virtual stack.
-Having two left parenthesis characters together, like $(($, will still put the number $1$ on a virtual stack and perform a \texttt{nand} operation.
-Having three left parenthesis characters together, like $((($, will still put the number $1$ on the virtual stack and perform a \texttt{nor} operation.
+Having two left parenthesis characters together, like $(($, will put the number $1$ on a virtual stack and perform a \texttt{nand} operation.
+Having three left parenthesis characters together, like $((($, will put the number $1$ on the virtual stack and perform a \texttt{nor} operation.
 The program evaluator is greedy, so the \texttt{nor} operation consisting of three left parenthesis will be performed first always over the other two if possible.
 
 A \texttt{nand} operation will pop off two numbers from the stack, ``and'' them, and then ``not'' the result.
