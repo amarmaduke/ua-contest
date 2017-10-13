@@ -7,7 +7,7 @@ Polish notation is read from right to left.
 A number is pushed on to a virtual stack.
 Operations pop two numbers from the virtual stack (or the calculator will error if two numbers are not on the stack) and evaluates the operation.
 The first number on the virtual stack is the left operand and the second number is the right operand.
-An expression in polish notation is considered ``well-founded'' if the virtual stack has only one number after all operations are processed.
+An expression in polish notation is considered ``well-founded'' if the virtual stack has only one number after all operations are processed and there at least two numbers on the stack for every operation.
 
 Polly wants you to implement a calculator for arithmetic expressions in polish notation.
 To make things a little easier for you the numbers are only from 1 to 9.

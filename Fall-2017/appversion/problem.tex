@@ -1,0 +1,31 @@
+\begin{problem}{A: Bleeding Edge}
+Samwell wants to be on the bleeding edge for his flashlight app on his new iPhone X.
+He cares a lot about this, so he's asked you to write a program that will execute every milisecond on his phone to check.
+The appstore will report a version number for the flashlight app and Samwell wants to know if he has the latest version.
+Samwell has discovered that sometimes the appstore will bug out and report a version older than the one he already has.
+In that case you're to report that he has the latest version regardless.
+\end{problem}
+
+\begin{formalin}
+The only line of input consists of two integers, $n$ and $m$ ($1 \leq n, m \leq 1000$).
+The first integer, $n$, is the version Samwell currently has.
+The second integer, $m$, is the version reported by the appstore.
+\end{formalin}
+
+\begin{formalout}
+Output the word ``YES'' (without quotes) if Samwell has the latest version and ``NO'' (without quotes) otherwise.
+\end{formalout}
+
+\begin{datain}
+10 100
+\end{datain}
+\begin{dataout}
+NO
+\end{dataout}
+
+\begin{datain}
+100 10
+\end{datain}
+\begin{dataout}
+YES
+\end{dataout}

@@ -14,10 +14,10 @@ The second formula would consist of $m$ coefficients and $m$ starting numbers.
 The next number in the first list, the $n+1$st number, would be the linear combination of the coefficients and the preceding numbers.
 For example, given starting numbers $a_i$ and coefficients $c_i$:
 
-$a_0 = 1$, $a_1 = 2$, $a_3 = 3$, $c_0 = 0$, $c_1 = 1$, $c_2 = 2$
+$a_0 = 1$, $a_1 = 2$, $a_2 = 3$, $c_0 = 0$, $c_1 = 1$, $c_2 = 2$
 
-then, $c_3 = c_2a_2 + c_1a_1 + c_0a_0 = 2\times 1 + 1\times 2 + 0\times 3 = 4$.
-$c_4$ would then be calculated with $c_3$, $c_2$, and $c_1$ (and the corresponding $a_i$s).
+then, $a_3 = c_2a_2 + c_1a_1 + c_0a_0 = 2\times 3 + 1\times 2 + 0\times 1 = 8$.
+$a_4$ would then be calculated with $c_3$, $c_2$, and $c_1$ (and the corresponding $a_i$s).
 Moreover, Abigail would give Johnny a number of terms $t_n$ for the first list and $t_m$ for the second list that Johnny should compute.
 Thus, after computing the two lists up to $t_n$ and $t_m$ elements respectively, he would then sum the lists.
 
