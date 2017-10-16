@@ -27,13 +27,19 @@ int main() {
         int count;
         cin >> count;
         assert(count >= 1 && count <= 100);
+        bool previous = false;
         for (int j = 0; j < count; ++j) {
             char x;
             cin >> x;
+            if (j == 0 || j == count - 1 || previous) {
+                assert(x != ';');
+            }
             assert((x >= 'a' && x <= 'z') || x == ';');
             if (x >= 'a' && x <= 'z') {
                 assert(functions.count(x) == 1);
             }
+            if (x == ';') { previous = true; }
+            else { previous = false; }
         }
     }
 }
