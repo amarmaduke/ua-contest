@@ -1,0 +1,45 @@
+\begin{problem}{C: Recurring Recurrences}
+Lily discovered an interesting fact about her favorite recurrence relation, the Fibonacci sequence.
+She discovered that the solution to the sequence can be written as $f_n = a_1 \alpha^n + a_2 \beta^n$ for some constants $a_1$, $a_2$, $\alpha$, and $\beta$.
+She's already worked out the math to figure out what those constants are.
+Lily had an epiphany about this particular form for the solution.
+That is, it must be the case that there is a $\mathcal{O}(\log n)$ solution for finding the $n$th Fibonacci number.
+
+Unfortunately, the equation Lily found above involves real arithmetic so round off error quickly prevents her from computing dramatically large numbers.
+She wants \textit{really} large Fibonacci numbers.
+Lily understands that this is impractical even for 64-bit integers so she's content calculating these numbers mod $7001$.
+She doesn't want to stop there, though, she's confident that if a fast solution for the Fibonacci recurrence relation exists then one must exists for \textit{all} recurrence relations of a similar type.
+That is, given a recurrence relation of the form $f_n = c_1 f_{n-1} + c_2 f_{n-2}$, with $f_2 = a$ and $f_1 = b$ she wants a quick solution for very large values of $n$.
+Note that in order to prevent real arithmetic from rearing its ugly head again she is only interested in recurrence relations where $c_1$, $c_2$, $a$, and $b$ are all positive integers.
+
+Lily is stuck on just how to go about achieving this goal.
+She's come to you for help because you're a super genius.
+Help Lily figure out the $n$th number mod $7001$ in a collection of recurrence relations.
+\end{problem}
+
+\begin{formalin}
+The first line of input is one integer, $q$ ($1 \leq q \leq 1000$), the number of queries.
+The next $q$ lines consists of five integers, $n$ ($3 \leq n \leq 10^8$), $c_1$, $c_2$, $a$, and $b$. ($1 \leq c_1, c_2, a, b, \leq 7000$).
+The integer $n$ is the $n$th number of the recurrence relation that you must compute.
+The integers $c_1$ and $c_2$ are the coefficients in the recurrence relation.
+The integers $a$ and $b$ are the starting values for the recurrence relation.
+\end{formalin}
+
+\begin{formalout}
+Output one integer for each query, the $n$th number in the recurrence relation, modulus $7001$.
+\end{formalout}
+
+\begin{datain}
+4
+6 1 1 1 1
+700 1 1 1 1
+3 1 2 3 4
+10 10 10 1 1
+\end{datain}
+
+\begin{dataout}
+8
+3766
+11
+3092
+\end{dataout}
