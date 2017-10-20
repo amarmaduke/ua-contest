@@ -1,0 +1,38 @@
+\begin{problem}{D: Snack Naps}
+Jastion has not eaten all day and he's ravenous. We don't want him to starve and deteriorate, but if we don't help him out he will surely eat too much. He can eat a surprising amount, and once he's eaten enough he goes into an uncontrollable giggling fit. If he eats too many calories, however, he falls asleep into a deep food coma.
+
+You have a sack of snacks to feed Jastion with. Each snack has its own calorie count and enjoyment value. The more Jastion enjoys his snacks, the more intense his giggling fits are. You like his giggling fits, but don't want him to fall asleep. Your task is to maximize the amount of enjoyment Jastion will have without putting him into a food coma.
+\end{problem}
+
+\begin{formalin}
+The first line of input contains two integers, $n$ and $m$ ($1 \leq n, m \leq 3000$).
+$n$ is the number of snacks and $m$ is the maximum amount of calories Jastion can eat without falling into a food coma.
+
+The next $n$ lines of input contain two integers $c$ ($1 \leq c \leq 3000$) and $g$ ($1 \leq g \leq 10^5$). $c$ is the amount of calories for a snack and $g$ is the amount of enjoyment it gives Jastion.
+\end{formalin}
+
+\begin{formalout}
+On a single line, output the maximum amount of enjoyment Jastion can have.
+\end{formalout}
+
+\begin{datain}
+3 500
+100 60
+200 100
+300 120
+\end{datain}
+\begin{dataout}
+220
+\end{dataout}
+
+\begin{datain}
+5 26
+12 24
+7 13
+11 23
+8 15
+9 16
+\end{datain}
+\begin{dataout}
+51
+\end{dataout}
