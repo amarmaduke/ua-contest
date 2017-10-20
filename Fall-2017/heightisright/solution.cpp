@@ -3,9 +3,8 @@
 
 using namespace std;
 
-
 int main() {
-    int child_limit, num_nodes, current_level = 0, nodes_at_current_level = 1, current_nodes = 1;
+    long long child_limit, num_nodes, current_level = 0, nodes_at_current_level = 1, current_nodes = 1;
     cin >> child_limit >> num_nodes;
 
     if (child_limit == 1) {
