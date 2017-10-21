@@ -1,0 +1,32 @@
+\begin{problem}{F: Inside Out}
+
+Things can look really weird when you turn them inside out.
+This includes words!
+To turn a word inside out, take the middle letter first, and then alternate taking a letter from each side, first from the left and then from the right.
+This process starts with the letters directly adjacent to the middle letter and moves toward the end.
+If the word is even in length, take the higher of the two middle letters for the process.
+\end{problem}
+
+\begin{formalin}
+The first line contains a single word, $s$, ($1 \leq length of s \leq 20$).
+
+The second line contains integers $s_i$ ($1 \leq s_i \leq 10^9$) from $s_1$ to $s_n$, where $s_i$ corresponds to the size of the snek in the $i$th position.
+\end{formalin}
+
+\begin{formalout}
+On a single line, output the inside out string.
+\end{formalout}
+
+\begin{datain}
+abcde
+\end{datain}
+\begin{dataout}
+cbdae
+\end{dataout}
+
+\begin{datain}
+abcdef
+\end{datain}
+\begin{dataout}
+dcebfa
+\end{dataout}
