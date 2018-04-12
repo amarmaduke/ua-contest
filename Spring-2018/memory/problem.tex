@@ -1,0 +1,43 @@
+\begin{problem}{A: Test Memorization}
+Janet needs to memorize a bunch of different words for her test.
+The professor informed her that every word would be its own question.
+Obviously, Janet decided that she wanted to memorize as many cards as possible to maximize her score.
+Unfortunately, there are a \textit{lot} of cards that she needs to memorize so figuring out which ones to study first by hand is very cumbersome.
+
+Each card has one word on it that starts with an ASCII lowercase alpha character (\texttt{'a'-'z'}) and continues with either an ASCII lowercase alpha character or a numeral (\texttt{'0'-'9'}).
+Janet was able to write a small program herself to label the cards with how many seconds she thinks each one will take to memorize.
+She also knows how many seconds she has available to study before the test.
+Help Janet out by telling her which cards she should study in order to maximize her score on the test!
+\end{problem}
+
+\begin{formalin}
+The first line of input consists of two integers, $n$ ($1 \leq n \leq 10^4$), the number of cards, and $k$ ($1 \leq k \leq 10^{10}$), the total number of seconds available to study. 
+The next $n$ lines consist of a string $s_i$, the name of the $i$th card, and an integer, $t_i$ ($1 \leq t_i \leq k$), the time in seconds needed to memorize the $i$th card.
+\end{formalin}
+
+\begin{formalout}
+Output one integer, the maximum number of cards that can be memorized in the time available to study.
+\end{formalout}
+
+\begin{datain}
+5 10
+rememberful 8
+joykingly 4
+hep 2
+mayhaps 2
+belive 5
+\end{datain}
+\begin{dataout}
+3
+\end{dataout}
+
+\begin{datain}
+4 10
+heppily 8
+mutin 2
+terseful 9
+googlex 8
+\end{datain}
+\begin{dataout}
+2
+\end{dataout}
