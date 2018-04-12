@@ -1,0 +1,44 @@
+\begin{problem}{A: Billy's Graph}
+Billy is a big fan of Graph Theory.
+When I say big, I mean he likes to invent types of graphs after himself because he wants to be a famous researcher in Graph Theory.
+Billy has come up with his latest and greatest invention of a type of graph and wants to share it with you.
+He calls these new graphs, Billy Graphs, they are indiciated by every edge sharing at least one node.
+
+Billy is pretty good at Graph Theory and other mathematical disciplines but doesn't really care for programming.
+He thinks its a lesser science.
+Yet, here he is, asking you for help!
+Billy wants a program to tell him if an abritrary graph is a Billy Graph or not and so he's come to you for help.
+\end{problem}
+
+\begin{formalin}
+The first line of input consists of two integers, $n$ ($3 \leq n \leq 1000$), the number of nodes, and $m$ ($2 \leq m \leq n^2$), the number of edges.
+The next $m$ lines consists of two integers, $a$ and $b$, representing an edge between nodes $a$ and $b$.
+\end{formalin}
+
+\begin{formalout}
+Output either \texttt{YES} if the graph is a Billy Graph, or \texttt{NO} otherwise. 
+\end{formalout}
+
+\begin{datain}
+6 5
+1 6
+2 6
+3 6
+4 6
+5 6
+\end{datain}
+\begin{dataout}
+YES
+\end{dataout}
+
+\begin{datain}
+5 5
+1 2
+2 3
+3 4
+2 4
+4 5
+\end{datain}
+\begin{dataout}
+NO
+\end{dataout}

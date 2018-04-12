@@ -1,6 +1,6 @@
 # Build directories
 build
-
+.vscode
 .DS_Store
 
 # LaTeX Output Files
