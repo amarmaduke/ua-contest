@@ -1,8 +1,0 @@
-Michael has been hard at work on his calculator 3D engine, X3D. His goal is to write the fastest software renderer ever written. The problem is, 3D rendering is hard stuff. Luckily, he's already written a lot of the mathy stuff and just needs help with one final step: occlusion culling.
-
-In a 3D scene, you have lots of polygons. When you draw these on the screen, the closer polygons cover up the polygons that are futher away (since humans have not yet evolved the ability to see through walls). This is known as occlusion culling, since closer polygons "occlude" the ones that are futher away. Your task is to take a set of polygons and draw the correctly occluded 3D image.
-
-
-The first line of input consists of two integers, W 1 <= W <= 320, the width of the screen in pixels, and H 1 <= H <= 240, the height of the screen in pixels. The next line has one integer P, 1 <= P <= 10000, the number of polygons in the scene. Next is the description of each polygon. Each polygon begins with one line that consists of a character C[i] (the color), an integer D[i], the depth value of the polygon, and N[i], the integer number of spans in the polygon. Following this line are N[i] lines consisting of the spans. Each span consists of three integers: xleft[j], xright[j], and y[j].
-
-

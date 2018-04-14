@@ -1,43 +1,74 @@
-\begin{problem}{A: Test Memorization}
-Janet needs to memorize a bunch of different words for her test.
-The professor informed her that every word would be its own question.
-Obviously, Janet decided that she wanted to memorize as many cards as possible to maximize her score.
-Unfortunately, there are a \textit{lot} of cards that she needs to memorize so figuring out which ones to study first by hand is very cumbersome.
+\begin{problem}{A: Spans}
+Mikhail has been hard at work on his calculator 3D engine, Ecks3D. His goal is to write the fastest software renderer ever written. The problem is, 3D rendering is hard stuff. Luckily, he's already written a lot of the mathy stuff and just needs help with one final step: occlusion culling.
 
-Each card has one word on it that starts with an ASCII lowercase alpha character (\texttt{'a'-'z'}) and continues with either an ASCII lowercase alpha character or a numeral (\texttt{'0'-'9'}).
-Janet was able to write a small program herself to label the cards with how many seconds she thinks each one will take to memorize.
-She also knows how many seconds she has available to study before the test.
-Help Janet out by telling her which cards she should study in order to maximize her score on the test!
+In a 3D scene, you have lots of polygons. When you draw these on the screen, the closer polygons cover up the polygons that are futher away (since humans have not yet evolved the ability to see through walls). This is known as occlusion culling, since closer polygons "occlude" the ones that are futher away. Your task is to take a set of polygons and draw the correctly occluded 3D image. To help you do this, every polygon has been given a depth value, which represents how close to the viewer a polygon is. Polygons that have a larger depth value are closer to the viewer and should occlude polygons that have a smaller depth value. It is guaranteed that no two polygons have the same depth value. Can you help Mikhail achieve his dream?
+
+Polygons are represented as a set of spans, which are horizontal slices of a polygon. The span defines, for a given y value, the horizontal range of pixels that are in the polygon. For example, if a span has a y of 10, left of 5, and right of 7, that indicates the pixels (5, 10), (6, 10), and (7, 10) are all in the polygon. All of the spans in a given polygon have the same color (represented as an ASCII character) and depth value.
+
+Of course, it's impossible to draw pixels if we don't use the proper coordinate system! The screen in Mikhail's engine uses a coordinate system where the x-axis increases to the left and the y-axis increases down.
+
+\begin{verbatim}
+(0,0)            (w,0)
+     +----------+
+     |          |
+     |          |
+     |          |
+     +----------+
+(0,h)            (w,h)
+\end{verbatim}
+
+In the example below, we want to draw a rectangle consisting of '.'s with a depth of 5. In addition, we want to draw circle of '\#'s with a depth of 10. Because the circle is closer, it covers up parts of the rectangle.
+
 \end{problem}
 
 \begin{formalin}
-The first line of input consists of two integers, $n$ ($1 \leq n \leq 10^4$), the number of cards, and $k$ ($1 \leq k \leq 10^{10}$), the total number of seconds available to study. 
-The next $n$ lines consist of a string $s_i$, the name of the $i$th card, and an integer, $t_i$ ($1 \leq t_i \leq k$), the time in seconds needed to memorize the $i$th card.
+The first line of input consists of two integers, $W$ ($1 \leq W \leq 320$), the width of the screen in pixels, and $H$ ($1 \leq H \leq 240$), the height of the screen in pixels. The next line has one integer $P$ ($1 \leq P \leq 10000$), the number of polygons in the scene.
+
+Next is the description of each polygon. The $i$th polygon begins with one line that consists of a character $C[i]$, the color of the polygon, an integer $D[i]$, the depth value of the polygon, and an integer $N[i]$, the number of spans in the polygon. Following this line are $N[i]$ total lines describing the spans in the polygon. The $j$'th span consists of three integers: $LEFT[j]$, $RIGHT[j]$ ($-10^{9} \leq LEFT[j] \leq RIGHT[j] \leq 10^{9}$) and $Y[j]$ ($-10^{9} \leq Y[j] \leq 10^{9}$). The number of spans across all of the polygons is guaranteed to be no more than $10^{6}$.
 \end{formalin}
 
 \begin{formalout}
-Output one integer, the maximum number of cards that can be memorized in the time available to study.
+
+
 \end{formalout}
 
-\begin{datain}
-5 10
-rememberful 8
-joykingly 4
-hep 2
-mayhaps 2
-belive 5
-\end{datain}
-\begin{dataout}
-3
-\end{dataout}
+Output only the pixels that are on the screen (remember some pixels may be off the screen!) with a space in between each pixel. A space is put between each pixel because most monspace fonts are taller than they are wide. If the pixel wasn't drawn, output a space instead of the color. Thus, you should print a grid that is $W \times 2$ by $H$ characters.
 
 \begin{datain}
-4 10
-heppily 8
-mutin 2
-terseful 9
-googlex 8
+12 12
+2
+. 8 5
+1 8 1
+1 8 2
+1 8 3
+1 8 4
+1 8 5
+1 8 6
+1 8 7
+1 8 8
+# 8 10
+6 9 4
+5 10 5
+4 11 6
+4 11 7
+4 11 8
+4 11 9
+5 10 10
+6 9 11
 \end{datain}
 \begin{dataout}
-2
+                        
+  . . . . . . . .       
+  . . . . . . . .       
+  . . . . . . . .       
+  . . . . . # # # #     
+  . . . . # # # # # #   
+  . . . # # # # # # # # 
+  . . . # # # # # # # # 
+  . . . # # # # # # # # 
+        # # # # # # # # 
+          # # # # # #   
+            # # # #     
+
 \end{dataout}
+

@@ -46,10 +46,13 @@ void drawSpan(Span& span, int depth, char color)
 
 int main()
 {
-    
     cin >> screenW >> screenH;
-    cin >> viewportW >> viewportH;
-    cin >> viewportX >> viewportY;
+    
+    viewportW = screenW;
+    viewportH = screenH;
+    
+    viewportX = 0;
+    viewportY = 0;
     
     for(int i = 0; i < viewportH; ++i)
     {

@@ -81,10 +81,10 @@ void clipSpans(vector<Span>& spans)
     
     for(int i = 0; i < (int)spans.size(); ++i)
     {
-        spans[i].left = max(spans[i].left, 0);
-        spans[i].right = min(spans[i].right, screenW - 1);
+        //spans[i].left = max(spans[i].left, 0);
+        //spans[i].right = min(spans[i].right, screenW - 1);
         
-        if(spans[i].left <= spans[i].right && spans[i].y >= 0 && spans[i].y < screenH)
+        if(spans[i].left <= spans[i].right)
             spans[writePos++] = spans[i];
     }
     
@@ -195,8 +195,6 @@ void addSpanFile(const char* fileName)
 void write()
 {
     cout << screenW << " " << screenH << endl;
-    cout << viewportW << " " << viewportH << endl;
-    cout << viewportX << " " << viewportY << endl;
     
     cout << totalPoly << endl;
     
@@ -244,9 +242,24 @@ void genX3dSample()
     write();
 }
 
+void genSample3()
+{
+    screenW = 320;
+    screenH = 240;
+ 
+    
+    
+    addRectanglePolygon(-1e9, -48000, 1e9, 48000, '.', 5);
+    
+    addCirclePolygon(20, 20, 50, '#', 1000);
+    addCirclePolygon(200, 200, 50, '#', 1);
+    
+    write();
+}
+
 int main()
 {
-    genX3dSample();
+    genSample3();
 }
 
 
