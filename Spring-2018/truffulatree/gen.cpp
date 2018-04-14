@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
 {
     if(argc < 3)
     {
-        cout << "Usage: " << argv[0] <<  " <# branches> <# queries>\n";
+        cout << "Usage: " << argv[0] <<  " <# joints> <# queries>\n";
         return 0;
     }
     
@@ -18,7 +18,12 @@ int main(int argc, char* argv[])
     int time = 0;
     const int MAX_DIFF = 100;
     
-    cout << n << endl;
+    cout << n + 1 << endl;
+    
+    int x = 0;
+    int y = 0;
+    
+    cout << "0 0 0" << endl;
     
     for(int i = 0; i < n; ++i)
     {
@@ -33,8 +38,12 @@ int main(int argc, char* argv[])
         int dtime = rand() % 100 + 1;
         
         time += dtime;
+        x += dx;
+        y += dy;
         
-        cout << time << " " << dx << " " << dy << endl;
+        y = max(0, y);
+        
+        cout << time << " " << x << " " << y << endl;
     }
     
     int q = atoi(argv[1]);

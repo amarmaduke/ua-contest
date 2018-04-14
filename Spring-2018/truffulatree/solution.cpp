@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdio>
 
 using namespace std;
 
@@ -60,21 +61,10 @@ Vec2 bruteForce(double time)
 
 int main()
 {
-    double x = 0;
-    double y = 0;
-    
-    joints[0].pos.x = 0;
-    joints[0].pos.y = 0;
-    joints[0].time = 0;
-    
     cin >> n;
-    for(int i = 1; i <= n; ++i)
+    for(int i = 0; i < n; ++i)
     {
-        double dx, dy;
-        cin >> joints[i].time >> dx >> dy;
-        
-        joints[i].pos.x = joints[i - 1].pos.x + dx;
-        joints[i].pos.y = joints[i - 1].pos.y + dy;
+        cin >> joints[i].time >> joints[i].pos.x >> joints[i].pos.y;
     }
     
     cin >> q;
@@ -85,7 +75,8 @@ int main()
         
         Vec2 res = solve(time);
         
-        cout << "Case " << i + 1 << ": (" << res.x << ", " << res.y << ")\n";
+        //cout << res.x << " " << res.y << endl;
+        printf("%.9f %.9f\n", res.x, res.y);
     }
 }
 
