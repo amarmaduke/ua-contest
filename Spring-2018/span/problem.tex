@@ -1,4 +1,4 @@
-\begin{problem}{A: Spans}
+\begin{problem}{C: Spans}
 Mikhail has been hard at work on his calculator 3D engine, Ecks3D. His goal is to write the fastest software renderer ever written. The problem is, 3D rendering is hard stuff. Luckily, he's already written a lot of the mathy stuff and just needs help with one final step: occlusion culling.
 
 In a 3D scene, you have lots of polygons. When you draw these on the screen, the closer polygons cover up the polygons that are futher away (since humans have not yet evolved the ability to see through walls). This is known as occlusion culling, since closer polygons "occlude" the ones that are futher away. Your task is to take a set of polygons and draw the correctly occluded 3D image. To help you do this, every polygon has been given a depth value, which represents how close to the viewer a polygon is. Polygons that have a larger depth value are closer to the viewer and should occlude polygons that have a smaller depth value. It is guaranteed that no two polygons have the same depth value. Can you help Mikhail achieve his dream?
@@ -28,11 +28,9 @@ Next is the description of each polygon. The $i$th polygon begins with one line 
 \end{formalin}
 
 \begin{formalout}
-
-
+Output only the pixels that are on the screen (remember some pixels may be off the screen!) with a space in between each pixel. A space is put between each pixel because most monspace fonts are taller than they are wide. If the pixel wasn't drawn, output a space instead of the color. Thus, you should print a grid that is $W \times 2$ by $H$ characters.
 \end{formalout}
 
-Output only the pixels that are on the screen (remember some pixels may be off the screen!) with a space in between each pixel. A space is put between each pixel because most monspace fonts are taller than they are wide. If the pixel wasn't drawn, output a space instead of the color. Thus, you should print a grid that is $W \times 2$ by $H$ characters.
 
 \begin{datain}
 12 12

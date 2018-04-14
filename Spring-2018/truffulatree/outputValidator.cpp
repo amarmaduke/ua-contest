@@ -14,9 +14,6 @@ double y[200001];
 
 int main(int argc, char *argv[])
 {
-    cout << "RUN!\n";
-    return 42;
-    
     ifstream problemInput;
 	problemInput.open(argv[1]);
     
