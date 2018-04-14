@@ -210,6 +210,26 @@ void write()
     }
 }
 
+void read()
+{
+    cin >> screenW >> screenH;
+    cin >> totalPoly;
+    
+    for(int i = 0; i < totalPoly; ++i)
+    {
+        int s;
+        cin >> poly[i].color >> s >> poly[i].depth;
+        
+        for(int j = 0; j < s; ++j)
+        {
+            Span s;
+            cin >> s.left >> s.right >> s.y;
+            
+            poly[i].spans.push_back(s);
+        }
+    }
+}
+
 void genSample1()
 {
     screenW = 12;
@@ -257,9 +277,23 @@ void genSample3()
     write();
 }
 
+void fixSample()
+{
+    read();
+    
+    srand(time(NULL));
+    
+    for(int i = 0; i < totalPoly; ++i)
+    {
+        swap(poly[i], poly[rand() % totalPoly]);
+    }
+    
+    write();
+}
+
 int main()
 {
-    genSample3();
+    fixSample();
 }
 
 
