@@ -1,0 +1,51 @@
+\begin{problem}{A: Chessymmetry} 
+Juniper is a big fan of symmetry and chess.
+A chess board consists of an 8 by 8 grid.
+Juniper is interested in chess boards that are completely filled with pieces from the game of chess such that the board is both horizontally and vertically symmetric.
+Juniper is only interested in pawns, bishops, rooks, knights, and queens.
+A board has two axes, one that runs through the center of the board between the fourth and fifth column and one that runs through the center of the board between the fourth and fifth rows.
+The axis between columns is called the horizontal axis, and the axis between rows is called the vertical axis.
+A board is considered horizontally symmetric if every cell of the board after folding it over the horizontal axis is equal.
+Note that after doing a fold of the board there will technically be two pieces occupying the same space, it is these two pieces that must be equal.
+Two pieces are said to be equal if they are the same kind, that is, pawns are equal to pawns, bishops are equal to bishops, and so on.
+A board is considered vertically symmetric if every cell of the board after folding it over the vertical axis is equal.
+Of course, as Juniper has already told you, he is interested in boards that are both horizontally \textit{and} vertically symmetric.
+He has enlisted your help in figuring out if a given configuration of a chess board (with every space occupied by a piece) is horizontally and vertically symmetric.
+\end{problem}
+
+\begin{formalin}
+There are 8 lines of input that consist of 8 characters.
+These characters can be either \texttt{P}, \texttt{B}, \texttt{R}, \texttt{K}, or \texttt{Q}.
+\end{formalin}
+
+\begin{formalout}
+Output either \texttt{YES} if the board is horizontally and vertically symmetric, or \texttt{NO} otherwise. 
+\end{formalout}
+
+\begin{datain}
+P Q K B B K Q P
+K P R P P R P K
+R B Q R R Q B R
+Q P R P P R P Q
+Q P R P P R P Q
+R B Q R R Q B R
+K P R P P R P K
+P Q K B B K Q P
+\end{datain}
+\begin{dataout}
+YES
+\end{dataout}
+
+\begin{datain}
+P Q K B B K Q P
+K P R P P R P K
+R B Q R R Q B R
+Q P R P P R P Q
+Q P R P P R P Q
+R B Q R R Q B R
+K P R P P R P K
+P Q Q B B Q Q P
+\end{datain}
+\begin{dataout}
+NO
+\end{dataout}
