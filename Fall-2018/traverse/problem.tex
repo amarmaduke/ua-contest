@@ -1,0 +1,73 @@
+\begin{problem}{A: Che-xploration-ss}
+Albert does not really know much about chess and would like to explore the game to learn more.
+As a challenge, Albert's friend decided to give him a board with obstacles and a single piece.
+Albert was tasked to find the minimum number of moves needed to reach any other cell.
+However, Albert negotiated with his friend that if the minimum number of moves would be larger than $9$, then he would report the number as \texttt{*} instead.
+
+Of course, Albert does not know how any of the pieces move!
+His friend decided that he should only learn about the knight, the bishop, the rook, and the queen to start.
+Recall that the knight is allowed to move two spaces horizontally or vertically and then one space in the opposite horizontal or vertical direction, forming an \textit{L} shape.
+The rook is allowed to move vertically or horizontally as much as it wants while staying on the board.
+The bishop is allowed to move diagonally (both left and right) as much as it wants while staying on the board.
+The queen can move as either a rook or a bishop.
+An obstacle on the board will be represented by an \texttt{X} and will prevent movement.
+You can think of this obstacle as an immovable pawn under your own control (i.e. you can not capture it).
+
+Unfortunately, neither Albert or his friend are very good at making sure Albert's answers are correct.
+That is where you come in.
+Albert's friend has asked you to write a program that will produce the correct answer so that Albert can easily check his attempt.
+\end{problem}
+
+\begin{formalin}
+The first line of input consists of one character that is either \texttt{B}, \texttt{R}, \texttt{K}, or \texttt{Q} representing if the piece is a bishop, rook, knight, or queen respectively followed by two integers, $u$ and $v$ ($0 \le u, v < 8$), the starting position of the piece.
+The following 8 lines of input consist of 8 space separated characters.
+These characters are either \texttt{.} or \texttt{X} representing an open space and an obstacle respectively.
+\end{formalin}
+
+\begin{formalout}
+Output 8 lines with 8 space separated characters each that represents the input grid with labels for the minimum number of moves to reach each location.
+\end{formalout}
+
+\begin{datain}
+Q 5 4
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+\end{datain}
+\begin{dataout}
+2 2 2 2 1 2 2 2
+1 2 2 2 1 2 2 2
+2 1 2 2 1 2 2 1
+2 2 1 2 1 2 1 2
+2 2 2 1 1 1 2 2
+1 1 1 1 0 1 1 1
+2 2 2 1 1 1 2 2
+2 2 1 2 1 2 1 2
+\end{dataout}
+
+\begin{datain}
+R 0 0
+. X . . . . X .
+. . . X X . X .
+X X X . . . X .
+. X . . X X . .
+. X . X . . . X
+. X . . . X . .
+. . X X X . X .
+. . . X . . . .
+\end{datain}
+\begin{dataout}
+0 X 3 4 4 4 X *
+1 2 2 X X 5 X *
+X X X 6 6 5 X *
+. X 8 7 X X * *
+. X 9 X * * * X
+. X 9 * * X * *
+. . X X X * X *
+. . . X * * * *
+\end{dataout}
