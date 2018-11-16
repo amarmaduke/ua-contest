@@ -1,0 +1,6 @@
+0: valid hello
+1: valid pawn
+2: valid rook
+3: corrupt
+4: dropped
+5: valid end
