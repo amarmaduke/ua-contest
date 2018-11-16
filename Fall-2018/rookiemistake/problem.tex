@@ -1,0 +1,62 @@
+\begin{problem}{A: Rookie Mistake}
+In a game of chess, the rook piece is able to move in a single straight line up, down, left, or right but not diagonally.
+The rook can move in this direction as many places as it likes until it is either:
+1. Blocked by another piece on his team then the rook must stop in the square on the board before colliding with the teammate.
+2. Hits the edge of the chess board then the rook must stop on the last piece.
+3. Collides with a piece on the enemy team then the rook will kill the enemy player, and take its place on the board.
+
+It apears that after you thought you won the game, your rook forgot to kill the enemy's king.
+Since the king is not dead, you know one of your rooks is to blame.
+This means you know you have at least one rook on the board but in a game of chess, you can have up to two total rooks.
+Figure out where your rook is and remind him to finish the objective.
+If that rook is unable to kill the king find your second rook and make sure the job is completed.
+Make sure you do not kill your own king.
+
+Note to players that uderstand the real game of chess: These situations may not be valid game ending moves in the real game of chess but these are just fun litle problems.
+\end{problem}
+
+\begin{formalin}
+The input consists of 8 lines containing 8 space separated letters.
+The letters are:
+R: A rook is occupying that position
+k: Your king is occupying this position
+K: The enemy king is occupying this position
+N: There are no pieces occupying this position
+\end{formalin}
+
+\begin{formalout}
+On a single line that is space separated,
+
+Output the X position of the rook you wish to move (zero indexed)
+Output the Y position of the rook you wish to move (zero indexed)
+Output the direction (U, D, L, R) you wish to move the rook in (Up, Down, Left, and Right respectively)
+Output the number of spaces the rook must move to kill the king.
+\end{formalout}
+
+\begin{datain}
+N N N N N N N N
+N N N k N N N N
+N N N N N N N N
+N N N N N N N N
+N N N N N N N N
+N N N N N N N N
+N R N N N N K N
+N N N N N N N N
+\end{datain}
+\begin{dataout}
+1 6 R 5
+\end{dataout}
+
+\begin{datain}
+N N N N N N N N
+N N N N N N N N
+N N N N N N N N
+N R N k N K N N
+N N N N N N N N
+N N N N N N N N
+N N N N N N K N
+N N N N N R N N
+\end{datain}
+\begin{dataout}
+5 7 U 4
+\end{dataout}
