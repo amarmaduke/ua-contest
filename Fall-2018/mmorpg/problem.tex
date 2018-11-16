@@ -1,0 +1,59 @@
+\begin{problem}{A: MMORPG}
+Your company is creating an MMORPG (a Massively Multiplayer Online Role-Playing Game) - for chess. What the heck that will look like is anyone's guess (never let business people decide what games should be made). Now, it wouldn't be much of an online game if you couldn't play online. The fools who are implementing it decided to use UDP, which has turned out to be quite problematic. Their game's been having lots of reliability issues, so your task is to write a tool to help them figure out what's been happening to their data.
+
+UPD is an internet protocol for sending packets. A packet is a small chuck of data to send, along with some metadata. Your game transmits a single packet to the server per frame. Why the metadata? Well you see, even though it's really fast, UPD suffers from several reliability problems. Sometimes packets arrive out of order. Sometimes duplicate packets arrive. Sometimes their data's corrupted. Even worse, sometimes they're dropped and don't arrive at all.
+
+To solve the arriving-out-of-order problem, packets include a sequence number. The first packet sent is assigned a sequence of 0, the second packet a sequence of 1, and so on. To handle packets with duplicate sequence numbers, we just keep the first one we got and ignore the duplicates. To handle corruption, packets include a checksum that was calculated before it was sent. A checksum is the sum of all the ASCII values of the packet's data. For example, if we had the string "cat", 'c' (ASCII 99) + 'a' (ASCII 97) + 't' (ASCII 166) = 312. The packet is considered corrupted if its checksum does not match its pre-transmission value. 
+
+To know whether a packet is dropped, we use a Time To Live (TTL) duration. A TTL specifies how long, in number of frames, we're willing to wait before concluding it's been dropped. For example, suppose you had a TTL of 5 and we'd only received packets 0, 1, and 10. Since your TTL is 5, you can deduce that packets 2, 3, and 4 were dropped. After this, you would no longer accept any packet with a sequence less than 5.
+
+Your job is to help your incompetant coworkers find out what happened to each packet. How else are they going to get a raise and make more money than you?
+\end{problem}
+
+\begin{formalin}
+The first line of input consists of one integer, $T$ ($0 \leq T \leq 1000$), the time to live for all packets. Following is a stream of up to $1000$ packets. The $i$th packet consists of a single line containing three things: an integer $SEQ[i]$ ($0 \leq $SEQ[i]$ \leq 1000$), the packet's sequence number, a string with no whitespace $DATA[i]$, the data sent in the packet, and an integer $SUM[i]$ ($0 \leq $SUM[i]$ \leq 10^{9}$), the checksum of the data. The stream of packets ends with a special packet that has its $DATA$ equal to end. It's guaranteed that this packet will arrive last and will have the largest sequence number.
+
+\end{formalin}
+
+\begin{formalout}
+For each packet in the sequence, output its sequence number, followed by a colon and a space. If the packet was dropped, print "dropped". If the packet was received but was corrupted, print "corrupt". Otherwise, print "valid" followed by the data in the packet. 
+\end{formalout}
+
+
+\begin{datain}
+5
+0 hello 532
+2 rook 443
+1 pawn 438
+2 rook 443
+3 queen 99999
+5 end 311
+\end{datain}
+\begin{dataout}
+0: valid hello
+1: valid pawn
+2: valid rook
+3: corrupt
+4: dropped
+5: valid end
+\end{dataout}
+
+\begin{datain}
+4
+0 Ne5 232
+6 Rd4 235
+0 Ne5 99999
+1 Ke7 231
+7 end 311
+\end{datain}
+\begin{dataout}
+0: valid Ne5
+1: dropped
+2: dropped
+3: dropped
+4: dropped
+5: dropped
+6: corrupt
+7: valid end
+\end{dataout}
+
