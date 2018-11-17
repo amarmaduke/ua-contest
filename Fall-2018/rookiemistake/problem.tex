@@ -12,15 +12,18 @@ Figure out where your rook is and remind him to finish the objective.
 If that rook is unable to kill the king find your second rook and make sure the job is completed.
 Make sure you do not kill your own king.
 
+The position of pieces are determined from the X and Y positions of the board where
+top-left=(0,0)     top-right=(7,0)     bottom-right=(7,7)
+
 Note to players that uderstand the real game of chess: These situations may not be valid game ending moves in the real game of chess but these are just fun litle problems.
 \end{problem}
 
 \begin{formalin}
 The input consists of 8 lines containing 8 space separated letters.
 The letters are:
-R: A rook is occupying that position
-k: Your king is occupying this position
-K: The enemy king is occupying this position
+R: A rook is occupying this position
+K: Your king is occupying this position
+$: The enemy king is occupying this position
 N: There are no pieces occupying this position
 \end{formalin}
 
@@ -35,12 +38,12 @@ Output the number of spaces the rook must move to kill the king.
 
 \begin{datain}
 N N N N N N N N
-N N N k N N N N
+N N N K N N N N
 N N N N N N N N
 N N N N N N N N
 N N N N N N N N
 N N N N N N N N
-N R N N N N K N
+N R N N N N $ N
 N N N N N N N N
 \end{datain}
 \begin{dataout}
@@ -51,7 +54,7 @@ N N N N N N N N
 N N N N N N N N
 N N N N N N N N
 N N N N N N N N
-N R N k N K N N
+N R N K N $ N N
 N N N N N N N N
 N N N N N N N N
 N N N N N N K N
