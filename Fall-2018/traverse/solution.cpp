@@ -114,7 +114,7 @@ void traverse(char kind, Board &board, queue<Cell> &q) {
             case 'B':
                 bishop(level, i, j, board, q);
                 break;
-            case 'K':
+            case 'N':
                 knight(level, i, j, board, q);
                 break;
         }
