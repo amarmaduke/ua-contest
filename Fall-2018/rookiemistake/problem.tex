@@ -1,4 +1,4 @@
-\begin{problem}{A: Rookie Mistake}
+\begin{problem}{C: Rookie Mistake}
 In a game of chess, the rook piece is able to move in a single straight line up, down, left, or right but not diagonally.
 The rook can move in this direction as many places as it likes until it is either:
 1. Blocked by another piece on his team then the rook must stop in the square on the board before colliding with the teammate.
@@ -21,18 +21,25 @@ Note to players that uderstand the real game of chess: These situations may not 
 \begin{formalin}
 The input consists of 8 lines containing 8 space separated letters.
 The letters are:
+
 R: A rook is occupying this position
+
 K: Your king is occupying this position
-$: The enemy king is occupying this position
+
+\$: The enemy king is occupying this position
+
 N: There are no pieces occupying this position
 \end{formalin}
 
 \begin{formalout}
-On a single line that is space separated,
+On a single line that is space separated:
 
 Output the X position of the rook you wish to move (zero indexed)
+
 Output the Y position of the rook you wish to move (zero indexed)
+
 Output the direction (U, D, L, R) you wish to move the rook in (Up, Down, Left, and Right respectively)
+
 Output the number of spaces the rook must move to kill the king.
 \end{formalout}
 

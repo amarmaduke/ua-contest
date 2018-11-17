@@ -1,4 +1,4 @@
-\begin{problem}{A: MMORPG}
+\begin{problem}{D: MMORPG}
 Your company is creating an MMORPG (a Massively Multiplayer Online Role-Playing Game) - for chess. What the heck that will look like is anyone's guess (never let business people decide what games should be made). Now, it wouldn't be much of an online game if you couldn't play online. The fools who are implementing it decided to use UDP, which has turned out to be quite problematic. Their game's been having lots of reliability issues, so your task is to write a tool to help them figure out what's been happening to their data.
 
 UPD is an internet protocol for sending packets. A packet is a small chunk of data to send, along with some metadata. Your game transmits a single packet to the server per frame. Why the metadata? Well you see, even though it's really fast, UDP suffers from several reliability problems. Sometimes packets arrive out of order. Sometimes duplicate packets arrive. Sometimes their data's corrupted. Even worse, sometimes they're dropped and don't arrive at all.
